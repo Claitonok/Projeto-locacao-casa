@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+    --cor-footer:black;
+    --color-azul3: #0455f8;
+    --cor-fundo: hsl(221, 100%, 41%);
+    --cor-hover: hsl(0, 0%, 100%);
+    --cor-link: hsl(0, 0%, 100%);
+}
