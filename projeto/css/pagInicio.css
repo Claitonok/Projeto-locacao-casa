@@ -38,11 +38,11 @@ main{
 .grid-container > div{
     text-align: center;
 }
-.grid-container > div .valor{
+.grid-container > div > div{
     display: flex;
     margin-left: 30%;
     text-decoration: none;
-    color: var(--cor-footer);
+    /* color: var(--cor-footer); */
 }
 
 /* Rodape footer */
