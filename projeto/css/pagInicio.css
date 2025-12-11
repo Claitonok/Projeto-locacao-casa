@@ -12,3 +12,12 @@
     --cor-hover: hsl(0, 0%, 100%);
     --cor-link: hsl(0, 0%, 100%);
 }
+
+#cabecalho{
+	display: flex;
+	justify-content: space-between;
+	font-family: sans-serif;
+	padding: 15px;
+	background-color: gray;
+	border-radius: 10px;
+}
