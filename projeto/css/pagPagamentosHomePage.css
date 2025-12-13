@@ -1,0 +1,116 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --cor-footer: black;
+    --color-azul3: rgb(12, 24, 192);
+    --cor-fundo: hsla(223, 64%, 35%, 0.483);
+    --cor-hover: hsl(0, 0%, 100%);
+    --cor-link: hsl(0, 0%, 100%);
+    --cor-form-input: hsl(43, 100%, 50%);
+    --cor-fundo-formulario: rgb(140, 140, 80);
+}
+
+#cabecalho {
+    display: flex;
+    justify-content: space-evenly;
+    font-family: sans-serif;
+    padding: 15px;
+    background-color: var(--color-azul3);
+    color: var(--cor-link);
+    box-shadow: 05px 05px 05px 05px rgb(66, 74, 191);
+}
+
+/* Corpo do site */
+body {
+    background-color: var(--cor-fundo);
+    border-radius: 10px;
+}
+
+.grid-container {
+    margin-top: 270px;
+    display: flex;
+    justify-content: flex-end;
+    text-align: center;
+}
+
+.conteiner {
+    width: 350px;
+    margin-top: 80px;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--cor-fundo-formulario);
+    box-shadow: 10px 10px 10px 10px var(--cor-form-input);
+}
+
+.conteiner>h5 {
+    color: var(--cor-link);
+}
+
+.grid-label {
+    padding: 10px;
+    color: var(--cor-link);
+}
+
+.grid-label input {
+    color: var(--cor-hover);
+    background-color: black;
+}
+
+.grid-label>button:hover {
+    padding: 5px;
+    color: var(--cor-footer);
+}
+
+
+
+
+
+
+/* Infomações do Rodape */
+.footer_inf {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: silver;
+    color: var(--cor-footer);
+    margin-top: 48px;
+    padding: 15px;
+}
+
+.footer_inf>div {
+    text-align: center;
+}
+
+/* Formatação de tela mais responsivo */
+@media screen and (max-width: 1200px) {
+
+    .grid-container {
+        margin-top: 270px;
+        display: flex;
+        justify-content: flex-end;
+        text-align: center;
+    }
+
+}
+
+@media screen and (max-width: 609px) {
+
+    .grid-container {
+        margin-top: 270px;
+        display: flex;
+        justify-content: flex-end;
+        text-align: center;
+    }
+
+    /* Infomações do Rodape */
+    .footer_inf {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 15px;
+    }
+
+}
