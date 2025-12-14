@@ -36,11 +36,11 @@ main {
     padding: 15px;
 }
 
-.grid-container>div {
+.grid-container > div {
     text-align: center;
 }
 
-.grid-container>div>div {
+.grid-container > div > div {
     display: flex;
     margin-left: 30%;
     text-decoration: none;
@@ -57,15 +57,15 @@ main {
     padding: 15px;
 }
 
-.conteiner_rodape>div {
+.conteiner_rodape > div {
     text-align: center;
 }
 
-.conteiner_rodape>div>p>b {
+.conteiner_rodape > div > p > b {
     font-family: sans-serif;
 }
 
-.conteiner_rodape>div>p>a {
+.conteiner_rodape > div > p > a {
     text-decoration: none;
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: var(--cor-footer);
@@ -78,7 +78,7 @@ main {
     padding: 15px;
 }
 
-.footer_inf>div {
+.footer_inf > div {
     text-align: center;
 }
 
