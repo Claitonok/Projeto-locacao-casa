@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import "tailwindcss";
 
 * {
     margin: 0;
@@ -35,21 +36,26 @@ body {
     display: flex;
     justify-content: center;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 2px;
 }
 .grid-section-inf{
     display: flex;
-    margin-left: 150px;
-    text-align: center;
-    margin-top: 30px;
-    color: var(--cor-link);
-    background-color: var(--cor-footer);
-    width: 50%;
+    justify-content: space-evenly;
+    margin-left: 470px;
+    margin-right: 470px;
+    margin-top:15px;
+    color: var(--cor-footer);
+    background-color: var(--cor-fundo-formulario);
     border-radius: 7px;
 }
-.grid-section-inf > div > p{
+.grid-section-inf > ul > li{
+    list-style-type: none;
     padding: 5px;
     margin-left: 15px;
+}
+.grid-section-inf > div > a > button:hover{
+    width: 135px;
+    color: var(--cor-footer);
 }
 
 .grid-nav{
@@ -84,7 +90,7 @@ body {
 
 /* Termina aqui - main*/
 /* ---------------------------------------- */
-.grid-container {
+/* .grid-container-pagamento {
     display: flex;
     justify-content: flex-end;
     text-align: center;
@@ -116,7 +122,7 @@ body {
 .grid-label > button:hover {
     width: 200px;
     color: var(--cor-footer);
-}
+} */
 
 
 
@@ -140,22 +146,68 @@ body {
 /* Formatação de tela mais responsivo */
 @media screen and (max-width: 1200px) {
 
-    .grid-container {
+    /* .grid-container-pagamento {
         margin-top: 270px;
         display: flex;
         justify-content: flex-end;
         text-align: center;
-    }
+    } */
+
+.grid-nav{
+        display: flex;
+        size: 10px;
+        justify-content: left;
+        text-align: center;
+        margin-top: 50px;
+        background-color: var(--cor-footer);
+        border-radius: 10px;
+        padding: 10px;
+        width: 35%;
+}
+
+.grid-section-inf{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top:15px;
+    color: var(--cor-footer);
+    background-color: var(--cor-fundo-formulario);
+    border-radius: 7px;
+}
+
+
 
 }
 
 @media screen and (max-width: 609px) {
 
-    .grid-container {
+    /* .grid-container-pagamento {
         margin-top: 270px;
         display: flex;
         justify-content: flex-end;
         text-align: center;
+    } */
+
+    .grid-nav{
+        display: flex;
+        size: 15px;
+        justify-content: left;
+        text-align: center;
+        margin-top: 50px;
+        background-color: var(--cor-footer);
+        border-radius: 10px;
+        padding: 10px;
+        width: 45%;
+}
+
+    .grid-section-inf{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-left: 15%;
+        margin-right: 15%;
+        margin-top:15px;
     }
 
     /* Infomações do Rodape */
@@ -164,5 +216,6 @@ body {
         grid-template-columns: 1fr;
         padding: 15px;
     }
+
 
 }
