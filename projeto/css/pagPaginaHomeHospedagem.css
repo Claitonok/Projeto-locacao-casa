@@ -88,45 +88,6 @@ body {
     background-color: var(--cor-fundo-formulario);
 }
 
-/* Termina aqui - main*/
-/* ---------------------------------------- */
-/* .grid-container-pagamento {
-    display: flex;
-    justify-content: flex-end;
-    text-align: center;
-}
-
-.conteiner {
-    width: 350px;
-    margin-top: -300px;
-    border-radius: 10px;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: var(--cor-fundo-formulario);
-    box-shadow: 10px 10px 10px 10px var(--cor-form-input);
-}
-
-.conteiner > h5 {
-    color: var(--cor-link);
-}
-
-.grid-label {
-    padding: 10px;
-    color: var(--cor-link);
-}
-
-.grid-label input {
-    color: var(--cor-hover);
-    background-color: black;
-    border-radius: 07px;
-}
-.grid-label > button:hover {
-    width: 200px;
-    color: var(--cor-footer);
-} */
-
-
-
-
 
 
 /* Infomações do Rodape */
@@ -135,7 +96,7 @@ body {
     justify-content: space-evenly;
     background-color: silver;
     color: var(--cor-footer);
-    margin-top: 48px;
+    margin-top: 65px;
     padding: 15px;
 }
 

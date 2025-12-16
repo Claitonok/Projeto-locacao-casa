@@ -1,0 +1,112 @@
+@charset "UTF-8";
+@import "tailwindcss";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --cor-footer: black;
+    --color-azul3: rgb(12, 24, 192);
+    --cor-fundo: hsla(223, 64%, 35%, 0.483);
+    --cor-hover: hsl(0, 0%, 100%);
+    --cor-link: hsl(0, 0%, 100%);
+    --cor-form-input: hsl(43, 100%, 50%);
+    --cor-fundo-formulario: rgb(140, 140, 80);
+}
+
+#cabecalho {
+    display: flex;
+    justify-content: space-evenly;
+    font-family: sans-serif;
+    padding: 15px;
+    background-color: var(--color-azul3);
+    color: var(--cor-link);
+    box-shadow: 05px 05px 05px 05px rgb(66, 74, 191);
+}
+
+/* Corpo do site */
+body {
+    background-color: var(--cor-fundo);
+}
+
+.conteiner{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 150px;
+}
+
+.conteiner-divisao1{
+    color: var(--cor-footer);
+    background-color: var(--cor-fundo-formulario);
+    border-radius: 7px;
+    padding: 15px;
+}
+.conteiner-divisao1 > h5{
+    font-size: 25px;
+}
+.conteiner-divisao1 > ul > li{
+    list-style-type: none;
+    padding: 5px;
+}
+
+/* ---------------------------------------- */
+.conteiner-divisao2{
+    text-align: center;
+
+}
+.conteiner-label {
+    width: 350px;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--cor-fundo-formulario);
+    box-shadow: 5px 2px 5px 2px var(--cor-form-input);
+}
+
+.conteiner > h5 {
+    color: var(--cor-link);
+}
+
+.grid-label {
+    padding: 10px;
+    color: var(--cor-link);
+}
+
+.grid-label input {
+    color: var(--cor-hover);
+    background-color: black;
+    border-radius: 07px;
+}
+.grid-label > button:hover {
+    width: 200px;
+    color: var(--cor-footer);
+}
+
+
+
+/* Infomações do Rodape */
+.footer_inf {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: silver;
+    color: var(--cor-footer);
+    margin-top: 760px;
+    padding: 15px;
+}
+
+.footer_inf > div {
+    text-align: center;
+}
+
+/* Formatação de tela mais responsivo */
+@media screen and (max-width: 1200px) {
+
+
+}
+
+
+@media screen and (max-width: 609px) {
+
+    
+}
