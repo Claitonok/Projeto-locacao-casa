@@ -102,11 +102,23 @@ body {
 /* Formatação de tela mais responsivo */
 @media screen and (max-width: 1200px) {
 
+    .container {
+        margin-top: 270px;
+        display: flex;
+        justify-content: flex-end;
+        text-align: center;
+    }
 
 }
 
 
 @media screen and (max-width: 609px) {
 
+    .container {
+        margin-top: 270px;
+        display: flex;
+        justify-content: flex-end;
+        text-align: center;
+    }
     
 }
