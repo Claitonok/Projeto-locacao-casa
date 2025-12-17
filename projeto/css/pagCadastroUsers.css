@@ -13,6 +13,16 @@
     --cor-link: hsl(0, 0%, 100%);
 }
 
+#cabecalho {
+    display: flex;
+    justify-content: space-around;
+    font-family: sans-serif;
+    padding: 15px;
+    background-color: var(--color-azul3);
+    color: var(--cor-link);
+    box-shadow: 05px 05px 05px 05px rgb(66, 74, 191);
+}
+
 body {
     background-color: rgb(247, 167, 76);
 
@@ -23,12 +33,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 80px;
 }
 
 /* formulario de login */
 form {
     font-family: monospace;
-    margin-top: 50px;
+    margin-top: 40px;
     width: 50%;
     margin-left: 30%;
     justify-content: center;

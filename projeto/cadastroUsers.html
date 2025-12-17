@@ -14,49 +14,62 @@
 
 <body>
 
+  <header>
+
+    <div id="cabecalho">
+      <img width="50" height="50" src="https://images.icon-icons.com/5/PNG/256/home_243.png" alt="casa">
+      <h4>Hospedagem ♾️ Home ♾️ Page</h4>
+
+      <a href="http://localhost:8080/Home_acomodacao/Home_acomo_Servlet?acao=home" target="_blank"
+        rel="noopener noreferrer"><button class="btn btn-dark">Home</button></a>
+    </div>
+
+  </header>
+
+
   <div class="logoCasa">
     <img height="100" width="100" src="https://images.icon-icons.com/5/PNG/256/home_243.png" alt="Casa">
   </div>
 
   <form action="" method="post">
-    
 
-      <label for="nome" class="col-sm-2 col-form-label">Nome</label>
-      <div class="col-auto">
-        <input type="text" id="nome" class="form-control">
-      </div>
 
-      
-        <label for="email"  class="col-sm-2 col-form-label">Email</label>
-        <div class="col-auto">
-          <input placeholder="exemplo@exemplo.com" type="email" id="email" class="form-control">
-        </div>
+    <label for="nome" class="col-sm-2 col-form-label">Nome</label>
+    <div class="col-auto">
+      <input type="text" id="nome" class="form-control">
+    </div>
 
-        
 
-          <label for="inputPassword6" class="col-sm-2 col-form-label">Password</label>
+    <label for="email" class="col-sm-2 col-form-label">Email</label>
+    <div class="col-auto">
+      <input placeholder="exemplo@exemplo.com" type="email" id="email" class="form-control">
+    </div>
 
-          <div class="col-auto">
-            <input type="password" id="inputPassword6" class="form-control">
-          </div>
 
-          <div class="col-auto">
-            <span id="passwordHelpInline" class="form-text">
-              Must be 8-20 characters long.
-            </span>
-          </div>
-        </div>
 
-        
-          <label for="telefone" class="col-sm-2 col-form-label">Telefone</label>
-          <div class="col-auto">
-            <input placeholder="(DD)xxxxx-xxxx" type="tel" id="telefone" class="form-control">
-          </div>
+    <label for="inputPassword6" class="col-sm-2 col-form-label">Password</label>
 
-          <div class="Sign-in">
-            <input type="hidden" name="acao" value="login"><br>
-            <button type="submit" name="autentica" class="btn btn-dark">Confirm identity</button>
-          </div>
+    <div class="col-auto">
+      <input type="password" id="inputPassword6" class="form-control">
+    </div>
+
+    <div class="col-auto">
+      <span id="passwordHelpInline" class="form-text">
+        Must be 8-20 characters long.
+      </span>
+    </div>
+    </div>
+
+
+    <label for="telefone" class="col-sm-2 col-form-label">Telefone</label>
+    <div class="col-auto">
+      <input placeholder="(DD)xxxxx-xxxx" type="tel" id="telefone" class="form-control">
+    </div>
+
+    <div class="Sign-in">
+      <input type="hidden" name="acao" value="login"><br>
+      <button type="submit" name="autentica" class="btn btn-dark">Confirm identity</button>
+    </div>
 
   </form>
 </body>
