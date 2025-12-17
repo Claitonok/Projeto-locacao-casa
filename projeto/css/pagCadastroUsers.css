@@ -1,0 +1,86 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --cor-footer: black;
+    --color-azul3: #0455f8;
+    --cor-fundo: hsl(221, 100%, 41%);
+    --cor-hover: hsl(0, 0%, 100%);
+    --cor-link: hsl(0, 0%, 100%);
+}
+
+body {
+    background-color: rgb(247, 167, 76);
+
+}
+
+/* logo da casa */
+.logoCasa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* formulario de login */
+form {
+    font-family: monospace;
+    margin-top: 50px;
+    width: 50%;
+    margin-left: 30%;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+label {
+    color: black;
+}
+
+#passwordHelpInline {
+    color: black;
+}
+
+
+/* botao de logar */
+.Sign-in button {
+    font-family: monospace;
+    margin-left: 33%;
+    box-shadow: 05px 05px 05px 05px rgb(26, 22, 22);
+
+}
+
+.Sign-in button:hover {
+    background-color: silver;
+    color: rgb(0, 0, 0);
+}
+
+@media screen and (max-width: 1200px){
+	form {
+    font-family: monospace;
+    margin-top: 50px;
+    width: 50%;
+    margin-left: 30%;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 10px;
+}
+}
+
+@media screen and (max-width: 609px){
+	form {
+    font-family: monospace;
+    margin-top: 50px;
+    width: 50%;
+    margin-left: 30%;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 10px;
+}
+}
