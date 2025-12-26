@@ -53,6 +53,73 @@ label {
 	color: black;
 }
 
+/* Aqui temos a validação do password */
+/* #toggleBtn
+{
+	top: 8px;
+	right: 10px;
+	width: 34px;
+	height: 34px;
+	background: rgba(0,0,0,0.05);
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	border-radius: 50%;
+}
+#toggleBtn::before 
+{
+	content: '\f06e';
+	font-family: fontAwesome;
+}
+#toggleBtn.hide::before 
+{
+	content: '\f070';
+	position: absolute;
+	font-family: fontAwesome;
+} */
+.validation
+{
+	padding: 10px;
+	width: 400px;
+	background: #fff;
+	border-radius: 8px;
+	margin-top: 30px;
+	background: #376488;
+	box-shadow: 0 15px 25px rgba(0,0,0,0.15);
+}
+.validation ul
+{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+} 
+.validation ul li
+{
+	position: relative;
+	list-style: none;
+	color: #fff;
+	font-size: 0.85em;
+	transition: 1.0s;
+}
+.validation ul li.valid 
+{
+	color: rgba(255,255,255,0.5);
+}
+.validation ul li::before 
+{
+	content: '\f192';
+	font-family: fontAwesome;
+	width: 20px;
+	display: inline-flex;
+}
+.validation ul li.valid::before 
+{
+	content: '\f00c';
+	color: #0f0;
+}
+
+/* Aqui termina a validação do password */
 
 /* botao de logar */
 .Sign-in button {
