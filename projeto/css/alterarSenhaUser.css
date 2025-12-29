@@ -1,0 +1,119 @@
+@charset "UTF-8";
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	--cor-footer: black;
+	--color-azul3: #0455f8;
+	--cor-fundo: hsl(221, 100%, 41%);
+	--cor-hover: hsl(0, 0%, 100%);
+	--cor-link: hsl(0, 0%, 100%);
+}
+
+#cabecalho {
+    display: flex;
+    justify-content: space-around;
+    font-family: sans-serif;
+    padding: 15px;
+    background-color: var(--color-azul3);
+    color: var(--cor-link);
+    box-shadow: 05px 05px 05px 05px rgb(66, 74, 191);
+}
+
+
+body {
+	background-color: rgb(247, 167, 76);
+}
+
+
+/* logo da casa */
+.logoCasa {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 80px;
+}
+
+
+/* formulario de login */
+form {
+	font-family: monospace;
+	margin-top: 40px;
+	width: 50%;
+	margin-left: 30%;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	border-radius: 10px;
+}
+
+label {
+	color: black;
+}
+
+
+
+/* botao de logar */
+.Enviar-email button {
+	font-family: monospace;
+	margin-left: 30%;
+	box-shadow: 05px 05px 05px 05px rgb(16, 36, 150);
+
+}
+
+.Enviar-email button:hover {
+	background-color: silver;
+	color: black;
+}
+
+/* DeskTop */
+@media screen and (min-width: 1025px) {
+	
+form {
+	font-family: monospace;
+	margin-top: 50px;
+	width: 50%;
+	margin-left: 30%;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	border-radius: 10px;
+}
+
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 1024px){
+	
+form {
+	font-family: monospace;
+	margin-top: 50px;
+	width: 50%;
+	margin-left: 30%;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	border-radius: 10px;
+}
+
+}
+
+/* Mobile */
+@media screen and (max-width: 767px){
+	
+form {
+	font-family: monospace;
+	margin-top: 50px;
+	width: 50%;
+	margin-left: 30%;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	border-radius: 10px;
+}
+
+}
+

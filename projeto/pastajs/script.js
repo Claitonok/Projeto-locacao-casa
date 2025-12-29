@@ -1,5 +1,6 @@
 
 let pswrd = document.getElementById("pswrd");
+let email = document.getElementById("txtemail");
 		let toggleBtn = document.getElementById("toggleBtn");
 		let lowerCase = document.getElementById("lower");
 		let upperCase = document.getElementById("upper");
@@ -25,6 +26,10 @@ let pswrd = document.getElementById("pswrd");
 			const number = new RegExp('(?=.*[0-9])');
 			const special = new RegExp('(?=.*[!@#\$%\^&\*])');
 			const length = new RegExp('(?=.{8,})');
+			
+			//Format Email Validation
+			const emailRegex = new RegExp('^[^\s@]+@[^\s@]+\.[^\s@]+$');
+
 			
 			//Lower Case Validation 
 			if(lower.test(data)){
