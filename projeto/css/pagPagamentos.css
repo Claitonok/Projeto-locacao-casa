@@ -84,14 +84,13 @@ body {
 }
 
 
-
 /* Infomações do Rodape */
 .footer_inf {
     display: flex;
     justify-content: space-evenly;
     background-color: silver;
     color: var(--cor-footer);
-    margin-top: 760px;
+    margin-top: 172px;
     padding: 15px;
 }
 
@@ -99,8 +98,8 @@ body {
     text-align: center;
 }
 
-/* Formatação de tela mais responsivo */
-@media screen and (max-width: 1200px) {
+/* DeskTop */
+@media screen and (min-width: 1025px)  {
 
     .container {
         margin-top: 270px;
@@ -109,15 +108,70 @@ body {
         text-align: center;
     }
 
+    /* Infomações do Rodape */
+    .footer_inf {
+        display: flex;
+        justify-content: space-evenly;
+        background-color: silver;
+        color: var(--cor-footer);
+        margin-top: 172px;
+        padding: 15px;
+    }
+
+    .footer_inf > div {
+        text-align: center;
+    }
+
 }
 
 
-@media screen and (max-width: 609px) {
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 1024px){
 
     .container {
-        margin-top: 270px;
         display: flex;
         justify-content: flex-end;
+        text-align: center;
+        margin-top: 270px;
+    }
+
+    /* Infomações do Rodape */
+    .footer_inf {
+        display: flex;
+        justify-content: space-evenly;
+        background-color: silver;
+        color: var(--cor-footer);
+        margin-top: 172px;
+        padding: 15px;
+    }
+
+    .footer_inf > div {
+        text-align: center;
+    }
+    
+}
+
+/* Mobile */
+@media screen and (max-width: 767px) {
+
+    .container {
+        display: flex;
+        justify-content: flex-end;
+        text-align: center;
+        margin-top: 270px;
+    }
+
+    /* Infomações do Rodape */
+    .footer_inf {
+        display: grid;
+        grid-template-columns: 1fr ;
+        background-color: silver;
+        color: var(--cor-footer);
+        margin-top: 172px;
+        padding: 15px;
+    }
+
+    .footer_inf > div {
         text-align: center;
     }
     
