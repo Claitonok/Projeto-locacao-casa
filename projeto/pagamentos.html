@@ -11,6 +11,8 @@
     <title>Pagamentos ♾️ HOME_PAGE</title>
 </head>
 
+<script src="./pastajs/calcularJsDiaria.js" defer></script>
+
 <body>
 
     <header>
@@ -26,7 +28,6 @@
     </nav>
 
     <main>
-
         <section>
             <div class="conteiner">
 
@@ -39,7 +40,7 @@
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                 <path
                                     d="M12.707 2.293l9 9c.63 .63 .184 1.707 -.707 1.707h-1v6a3 3 0 0 1 -3 3h-1v-7a3 3 0 0 0 -2.824 -2.995l-.176 -.005h-2a3 3 0 0 0 -3 3v7h-1a3 3 0 0 1 -3 -3v-6h-1c-.89 0 -1.337 -1.077 -.707 -1.707l9 -9a1 1 0 0 1 1.414 0m.293 11.707a1 1 0 0 1 1 1v7h-4v-7a1 1 0 0 1 .883 -.993l.117 -.007z" />
-                            </svg> Casa no vale</li>
+                            </svg><b> Casa no vale</b></li>
                         <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round"
@@ -51,7 +52,7 @@
                                 <path d="M11 14v4c0 1.657 2.239 3 5 3s5 -1.343 5 -3v-4" />
                                 <path d="M7 9h-2.5a1.5 1.5 0 0 0 0 3h1a1.5 1.5 0 0 1 0 3h-2.5" />
                                 <path d="M5 15v1m0 -8v1" />
-                            </svg> Valor por diaria <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+                            </svg><b>Valor por diaria</b><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                 stroke-linecap="round" stroke-linejoin="round"
                                 class="icon icon-tabler icons-tabler-outline icon-tabler-currency-real">
@@ -60,7 +61,7 @@
                                 <path d="M4 18v-12h3a3 3 0 1 1 0 6h-3c5.5 0 5 4 6 6" />
                                 <path d="M18 6v-2" />
                                 <path d="M17 20v-2" />
-                            </svg> <span id="valor"><b>400</b></span></li>
+                            </svg> <span id="valor1"><b>400</b></span></li>
                         <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round"
@@ -70,70 +71,99 @@
                                 <path d="M9 21v-6a2 2 0 0 1 2 -2h1.5" />
                                 <path
                                     d="M17.8 20.817l-2.172 1.138a.392 .392 0 0 1 -.568 -.41l.415 -2.411l-1.757 -1.707a.389 .389 0 0 1 .217 -.665l2.428 -.352l1.086 -2.193a.392 .392 0 0 1 .702 0l1.086 2.193l2.428 .352a.39 .39 0 0 1 .217 .665l-1.757 1.707l.414 2.41a.39 .39 0 0 1 -.567 .411l-2.172 -1.138z" />
-                            </svg> Classificação: <span>⭐ 4.1</span></li>
-                    </ul>
+                            </svg><b>Classificação: </b><span>⭐ <b>4.1</b></span></li>
 
+                        <h5><b>Detalhes da reserva</b></h5>
+                        <li><b>Check-in:</b><span><b> 14:00 - 22:00</b></span></li>
+                        <li><b>Check-out:</b><span><b> 07:00 - 11:00</b></span></li>
+                        <li><b>Cancelamento grátis até:</b><span><b> 48 horas antes do check-in</b></span></li>
+                    </ul>
                 </div>
+
+
 
                 <!-- Aqui temos as informações da acomodação escolhida pelo usuario!! -->
                 <div class="conteiner-divisao2">
 
                     <form action="" method="post">
 
-                        <div class="conteiner-label">
-                            <h5>Pagamento</h5>
-                            <div class="grid-label">
+                        <div class="conteiner-calcular">
+                        <h5><b>Calcular</b></h5>
+                        <div class="grid-label">
 
-                                
-                                <label for="">Nome Completo</label>
-                                <div class="mb-3">
-                                    <input type="text" id="" placeholder="Nome do cartão">
-                                </div>
-                                
-                                <label for="">CPF</label>
-                                <div class="mb-3">
-                                    <input type="text" id="" placeholder="000.000.000-00">
-                                </div>
-                                
-                                <label for="">Numero do cartão</label>
-                                <div class="mb-3">
-                                    <input type="text" id="" placeholder="xxx xxx xxx xxx">
-                                </div>
-
-                                <label for="">Data de validade</label>
-                                <div class="mb-3">
-                                    <input type="date" name="data" id="">
-                                </div>
-
-                                <label for="">Codigo de Segurança</label>
-                                <div class="mb-3">
-                                    <input type="text" id="" placeholder="000">
-                                </div>
-
-                                <div class="mb-3">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                        fill="currentColor"
-                                        class="icon icon-tabler icons-tabler-filled icon-tabler-key">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                        <path
-                                            d="M14.52 2c1.029 0 2.015 .409 2.742 1.136l3.602 3.602a3.877 3.877 0 0 1 0 5.483l-2.643 2.643a3.88 3.88 0 0 1 -4.941 .452l-.105 -.078l-5.882 5.883a3 3 0 0 1 -1.68 .843l-.22 .027l-.221 .009h-1.172c-1.014 0 -1.867 -.759 -1.991 -1.823l-.009 -.177v-1.172c0 -.704 .248 -1.386 .73 -1.96l.149 -.161l.414 -.414a1 1 0 0 1 .707 -.293h1v-1a1 1 0 0 1 .883 -.993l.117 -.007h1v-1a1 1 0 0 1 .206 -.608l.087 -.1l1.468 -1.469l-.076 -.103a3.9 3.9 0 0 1 -.678 -1.963l-.007 -.236c0 -1.029 .409 -2.015 1.136 -2.742l2.643 -2.643a3.88 3.88 0 0 1 2.741 -1.136m.495 5h-.02a2 2 0 1 0 0 4h.02a2 2 0 1 0 0 -4" />
-                                    </svg>
-                                    <label for="">Pagar no pix</label>
-                                    <input type="checkbox" value="aceito">
-                                </div>
-
-                                <button type="submit" class="btn btn-success">Efetuar Pagamento</button>
-
+                            <label for="valor">Valor Diária</label>
+                            <div class="mb-3">
+                                <input type="number" id="valor" value="400" readonly>
                             </div>
+
+                            <label for="Data_Inicio">Data Inicio</label>
+                            <div class="mb-3">
+                                <input type="date" name="data" id="DataInicio">
+                            </div>
+
+                            <label for="Data_Final">Data Final</label>
+                            <div class="mb-3">
+                                <input type="date"name="data" id="DataFinal">
+                            </div>
+                            <hr>
+                            <label for="resultado">Total</label>
+                            <div class="mb-3">
+                                <input type="number" name="total" id="resultado" readonly>
+                            </div>
+                            <span class="btn btn-danger" id="formatacaoInput"></span>
+                        </div>
                         </div>
 
+                        <div class="conteiner-pagamento">
+                        <h5><b>Pagamento</b></h5>
+                        <div class="grid-label">
+
+                            <label for="">Nome Completo</label>
+                            <div class="mb-3">
+                                <input type="text" id="" placeholder="Nome do cartão">
+                            </div>
+
+                            <label for="">CPF</label>
+                            <div class="mb-3">
+                                <input type="text" id="" placeholder="000.000.000-00">
+                            </div>
+
+                            <label for="">Numero do cartão</label>
+                            <div class="mb-3">
+                                <input type="text" id="" placeholder="xxx xxx xxx xxx">
+                            </div>
+
+                            <label for="">Data de validade</label>
+                            <div class="mb-3">
+                                <input type="date" name="data" id="">
+                            </div>
+
+                            <label for="">Codigo de Segurança</label>
+                            <div class="mb-3">
+                                <input type="number" id="" placeholder="000">
+                            </div>
+
+                            <div class="mb-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-key">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <path
+                                        d="M14.52 2c1.029 0 2.015 .409 2.742 1.136l3.602 3.602a3.877 3.877 0 0 1 0 5.483l-2.643 2.643a3.88 3.88 0 0 1 -4.941 .452l-.105 -.078l-5.882 5.883a3 3 0 0 1 -1.68 .843l-.22 .027l-.221 .009h-1.172c-1.014 0 -1.867 -.759 -1.991 -1.823l-.009 -.177v-1.172c0 -.704 .248 -1.386 .73 -1.96l.149 -.161l.414 -.414a1 1 0 0 1 .707 -.293h1v-1a1 1 0 0 1 .883 -.993l.117 -.007h1v-1a1 1 0 0 1 .206 -.608l.087 -.1l1.468 -1.469l-.076 -.103a3.9 3.9 0 0 1 -.678 -1.963l-.007 -.236c0 -1.029 .409 -2.015 1.136 -2.742l2.643 -2.643a3.88 3.88 0 0 1 2.741 -1.136m.495 5h-.02a2 2 0 1 0 0 4h.02a2 2 0 1 0 0 -4" />
+                                </svg>
+                                <label for="">Pagar no pix</label>
+                                <input type="checkbox" value="aceito">
+                            </div>
+                            <button type="submit" class="btn btn-success">Efetuar Pagamento</button>
+                        </div>
+
+
+                        </div>
                     </form>
 
                 </div>
 
             </div>
         </section>
-
     </main>
 
     <footer>

@@ -58,12 +58,17 @@ body {
 }
 
 .grid-section-inf>ul>li {
+    box-shadow: 05px 05px 05px 05px rgb(103, 103, 103);
     list-style-type: none;
     padding: 5px;
     margin-left: 15px;
 }
+.grid-section-inf>ul>li>b {
+    font-size: 20px;
+	color: var(--cor-link);
+}
 
-.grid-section-inf>div>a>button:hover {
+.grid-section-inf>div>form>button:hover {
     width: 135px;
     color: var(--cor-footer);
 }
@@ -76,7 +81,7 @@ body {
     background-color: var(--cor-footer);
     border-radius: 10px;
     padding: 12px;
-    width: 23%;
+    width: 430px;
 }
 
 .grid-nav>ul>li {
@@ -123,14 +128,13 @@ body {
 
     .grid-nav {
         display: flex;
-        size: 10px;
         justify-content: left;
         text-align: center;
         margin-top: 50px;
         background-color: var(--cor-footer);
         border-radius: 10px;
         padding: 10px;
-        width: 35%;
+        width: 430px;
     }
 
     /* Formatação da imagem */
@@ -167,14 +171,13 @@ body {
 
     .grid-nav {
         display: flex;
-        size: 15px;
         justify-content: left;
         text-align: center;
         margin-top: 50px;
         background-color: var(--cor-footer);
         border-radius: 10px;
         padding: 10px;
-        width: 45%;
+        width: 430px;
     }
 
     /* Formatação da imagem */
@@ -211,14 +214,13 @@ body {
 
     .grid-nav {
         display: flex;
-        size: 15px;
         justify-content: left;
         text-align: center;
         margin-top: 50px;
         background-color: var(--cor-footer);
         border-radius: 10px;
         padding: 10px;
-        width: 45%;
+        width: 430px;
     }
 
     /* Formatação da imagem */

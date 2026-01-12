@@ -1,6 +1,5 @@
 
 let pswrd = document.getElementById("pswrd");
-let email = document.getElementById("txtemail");
 		let toggleBtn = document.getElementById("toggleBtn");
 		let lowerCase = document.getElementById("lower");
 		let upperCase = document.getElementById("upper");
