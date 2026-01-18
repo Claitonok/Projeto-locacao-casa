@@ -31,35 +31,73 @@
                             <span>Dados da Acomodação</span>
                             <ul>
 
-                                <label for="nome" class="col-sm-2 col-form-label">Password</label>
+                                <label for="txtState" class="col-sm-2 col-form-label">Estado</label>
                                 <div class="row mb-3">
                                     <div class="col-sm-10">
-                                        <input type="password" name="txtNome" placeholder="Nome"
-                                         class="form-control" value="" id="nome" readonly>
+                                        <input type="text" name="txtState" placeholder="Estado" class="form-control"
+                                            value="${ListDados.state}" id="txtState" readonly>
                                     </div>
                                 </div>
 
-                                <label for="nome" class="col-sm-2 col-form-label">Password</label>
+                                <label for="txtCity" class="col-sm-2 col-form-label">Cidade</label>
                                 <div class="row mb-3">
                                     <div class="col-sm-10">
-                                        <input type="password" name="txtNome" placeholder="Nome"
-                                         class="form-control" value="" id="nome" readonly>
+                                        <input type="text" name="txtCity" placeholder="Cidade" class="form-control"
+                                            value="${ListDados.city}" id="txtCity" readonly>
                                     </div>
                                 </div>
 
-                                <label for="nome" class="col-sm-2 col-form-label">Password</label>
+                                <label for="txtDataInicio" class="col-sm-2 col-form-label">Data Inicio</label>
                                 <div class="row mb-3">
                                     <div class="col-sm-10">
-                                        <input type="password" name="txtNome" placeholder="Nome"
-                                         class="form-control" value="" id="nome" readonly>
+                                        <input type="date" name="txtDataInicio" placeholder="Data Inicio"
+                                            class="form-control" value="${ListDados.dataInicio}" id="txtDataInicio"
+                                            readonly>
                                     </div>
                                 </div>
 
-                                <label for="nome" class="col-sm-2 col-form-label">Password</label>
+                                <label for="txtDataFinal" class="col-sm-2 col-form-label">Data Final</label>
                                 <div class="row mb-3">
                                     <div class="col-sm-10">
-                                        <input type="password" name="txtNome" placeholder="Nome"
-                                         class="form-control" value="" id="nome" readonly>
+                                        <input type="date" name="txtDataFinal" placeholder="Data Final"
+                                            class="form-control" value="${ListDados.checkin}" id="txtDataFinal"
+                                            readonly>
+                                    </div>
+                                </div>
+
+                                <label for="txtCheck-in" class="col-sm-2 col-form-label">Check-in</label>
+                                <div class="row mb-3">
+                                    <div class="col-sm-10">
+                                        <input type="text" name="txtCheck-in" placeholder="Check-in"
+                                            class="form-control" value="${ListDados.checkout}" id="txtCheck-in"
+                                            readonly>
+                                    </div>
+                                </div>
+
+                                <label for="txtCheck-out" class="col-sm-2 col-form-label">Check-out</label>
+                                <div class="row mb-3">
+                                    <div class="col-sm-10">
+                                        <input type="text" name="txtCheck-out" placeholder="Check-out"
+                                            class="form-control" value="${ListDados.checkout}" id="txtCheck-out"
+                                            readonly>
+                                    </div>
+                                </div>
+
+                                <label for="txtTotal" class="col-sm-2 col-form-label">Total</label>
+                                <div class="row mb-3">
+                                    <div class="col-sm-10">
+                                        <input type="text" name="txtTotal" placeholder="Total" class="form-control"
+                                            value="${ListDados.total}" id="txtTotal" readonly>
+                                    </div>
+                                </div>
+
+                                <hr>
+                                <label for="txtCancelamento" class="col-sm-2 col-form-label">Cancelamento</label>
+                                <div class="row mb-3">
+                                    <div class="col-sm-10">
+                                        <input type="text" name="txtCancelamento" placeholder="Cancelamento"
+                                            class="form-control" value="${ListDados.cancelamento}" id="txtCancelamento"
+                                            readonly>
                                     </div>
                                 </div>
 
@@ -69,54 +107,58 @@
                         <div class="col">
                             <span>Informações de Pagamentos</span>
                             <ul>
-                               <label for="nome" class="col-sm-2 col-form-label">Password</label>
+                                <label for="txtnome" class="col-sm-2 col-form-label">Nome</label>
                                 <div class="row mb-3">
                                     <div class="col-sm-10">
-                                        <input type="password" name="txtNome" placeholder="Nome"
-                                         class="form-control" value="" id="nome" readonly>
+                                        <input type="text" name="txtnome" placeholder="Nome" class="form-control"
+                                            value="${ListDados.nome}" id="txtnome" readonly>
                                     </div>
                                 </div>
 
-                                <label for="nome" class="col-sm-2 col-form-label">Password</label>
+                                <label for="txtcpf" class="col-sm-2 col-form-label">CPF</label>
                                 <div class="row mb-3">
                                     <div class="col-sm-10">
-                                        <input type="password" name="txtNome" placeholder="Nome"
-                                         class="form-control" value="" id="nome" readonly>
+                                        <input type="text" name="txtcpf" placeholder="000.000.000-00"
+                                            class="form-control" value="${ListDados.cpf}" id="txtcpf" maxlength="14"
+                                            readonly>
                                     </div>
                                 </div>
 
-                                <label for="nome" class="col-sm-2 col-form-label">Password</label>
+                                <label for="txtnCart" class="col-sm-2 col-form-label">Numero
+                                    do cartão</label>
                                 <div class="row mb-3">
                                     <div class="col-sm-10">
-                                        <input type="password" name="txtNome" placeholder="Nome"
-                                         class="form-control" value="" id="nome" readonly>
+                                        <input type="text" name="txtnCart" placeholder="Numero do cartão"
+                                            class="form-control" value="${ListDados.cart}" id="txtnCart" readonly>
                                     </div>
                                 </div>
 
-                                <label for="nome" class="col-sm-2 col-form-label">Password</label>
+                                <label for="txtdataValid" class="col-sm-2 col-form-label">Data de validade</label>
                                 <div class="row mb-3">
                                     <div class="col-sm-10">
-                                        <input type="password" name="txtNome" placeholder="Nome"
-                                         class="form-control" value="" id="nome" readonly>
-                                        </div>
+                                        <input type="date" name="txtdataValid" placeholder="Data de validade"
+                                            class="form-control" value="${ListDados.dataValid}" id="txtdataValid"
+                                            readonly>
+                                    </div>
                                 </div>
 
-                                <label for="nome" class="col-sm-2 col-form-label">Password</label>
+                                <label for="txtcDSeguran" class="col-sm-2 col-form-label">CVV</label>
                                 <div class="row mb-3">
                                     <div class="col-sm-10">
-                                        <input type="password" name="txtNome" placeholder="Nome"
-                                         class="form-control" value="" id="nome" readonly>
-                                        </div>
+                                        <input type="number" name="txtcDSeguran" placeholder="CVV" class="form-control"
+                                            value="${ListDados.cDSeguran}" id="txtcDSeguran" readonly>
+                                    </div>
                                 </div>
-                                    
-                                </ul>
-                                
-                            </div>
+
+
+                            </ul>
+
+                        </div>
 
                         <button type="submit" id="button" class="btn btn-success">Pagar</button>
-                          
+
                     </div>
-                    
+
                 </form>
             </div>
         </section>
