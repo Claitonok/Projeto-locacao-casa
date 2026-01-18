@@ -1,0 +1,210 @@
+@charset "UTF-8";
+@import "tailwindcss";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --cor-footer: black;
+    --color-azul3: rgb(12, 24, 192);
+    --cor-fundo: hsla(223, 64%, 35%, 0.483);
+    --cor-hover: hsl(0, 0%, 100%);
+    --cor-link: hsl(0, 0%, 100%);
+    --cor-form-input: hsl(43, 100%, 50%);
+    --cor-fundo-formulario: rgb(140, 140, 80);
+}
+
+#cabecalho {
+    display: flex;
+    justify-content: space-evenly;
+    font-family: sans-serif;
+    padding: 15px;
+    background-color: var(--color-azul3);
+    color: var(--cor-link);
+    box-shadow: 05px 05px 05px 05px rgb(66, 74, 191);
+}
+
+/* Corpo do site */
+body {
+    background-color: var(--cor-fundo);
+}
+
+/* Nosso form onde mostramos os items */
+main section>div {
+    margin-top: 50px;
+}
+
+main section>div>form>div {
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+main section>div>form>div>div {
+    background-color: var(--cor-fundo);
+    border-radius: 15px;
+}
+
+main section>div>form>div>div span {
+    font-size: x-large;
+    color: rgb(255, 255, 255);
+    box-shadow: 2px 5px 2px 5px hsla(132, 100%, 51%, 0.374);
+    background-color: hsla(225, 99%, 34%, 0.453);
+    border-radius: 10px;
+}
+
+main section > div > form > div .col label{
+    display: flex;
+    justify-content: left;
+    color: rgb(0, 0, 0);
+}
+#button{
+    margin-top: 30px;
+    font-size: x-large;
+}
+#button:hover{
+    font-size: larger;
+    border-color: black;
+}
+
+/* Infomações do Rodape */
+.footer_inf {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: silver;
+    color: var(--cor-footer);
+    margin-top: 630px;
+    padding: 15px;
+}
+
+.footer_inf>div {
+    text-align: center;
+}
+
+/* DeskTop */
+@media screen and (min-width: 1025px) {
+
+    /* Nosso form onde mostramos os items */
+    main section>div {
+        margin-top: 50px;
+    }
+
+    main section>div>form>div {
+        height: 50px;
+        margin-bottom: 15px;
+    }
+
+    main section>div>form>div>div {
+        background-color: var(--cor-fundo);
+        border-radius: 15px;
+    }
+
+    main section>div>form>div>div span {
+        font-size: x-large;
+        color: rgb(255, 255, 255);
+        box-shadow: 2px 5px 2px 5px hsla(132, 100%, 51%, 0.374);
+        background-color: hsla(225, 99%, 34%, 0.453);
+        border-radius: 10px;
+    }
+
+    /* Infomações do Rodape */
+    .footer_inf {
+        display: flex;
+        justify-content: space-evenly;
+        background-color: silver;
+        color: var(--cor-footer);
+        margin-top: 630px;
+        padding: 15px;
+    }
+
+    .footer_inf>div {
+        text-align: center;
+    }
+
+}
+
+
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    /* Nosso form onde mostramos os items */
+    main section>div {
+        margin-top: 50px;
+    }
+
+    main section>div>form>div {
+        height: 50px;
+        margin-bottom: 15px;
+    }
+
+    main section>div>form>div>div {
+        background-color: var(--cor-fundo);
+        border-radius: 15px;
+    }
+
+    main section>div>form>div>div span {
+        font-size: 18px;
+        color: rgb(255, 255, 255);
+        box-shadow: 2px 5px 2px 5px hsla(132, 100%, 51%, 0.374);
+        background-color: hsla(225, 99%, 34%, 0.453);
+        border-radius: 10px;
+    }
+
+    /* Infomações do Rodape */
+    .footer_inf {
+        display: flex;
+        justify-content: space-evenly;
+        background-color: silver;
+        color: var(--cor-footer);
+        margin-top: 628px;
+        padding: 15px;
+    }
+
+    .footer_inf>div {
+        text-align: center;
+    }
+
+}
+
+/* Mobile */
+@media screen and (max-width: 767px) {
+
+    /* Nosso form onde mostramos os items */
+    main section>div {
+        margin-top: 50px;
+    }
+
+    main section>div>form>div {
+        height: 50px;
+        margin-bottom: 15px;
+    }
+
+    main section>div>form>div>div {
+        background-color: var(--cor-fundo);
+        border-radius: 15px;
+    }
+
+    main section>div>form>div>div span {
+        font-size: 18px;
+        color: rgb(255, 255, 255);
+        box-shadow: 2px 5px 2px 5px hsla(132, 100%, 51%, 0.374);
+        background-color: hsla(225, 99%, 34%, 0.453);
+        border-radius: 10px;
+    }
+
+    /* Infomações do Rodape */
+    .footer_inf {
+        display: grid;
+        grid-template-columns: 1fr;
+        background-color: silver;
+        color: var(--cor-footer);
+        margin-top: 630px;
+        padding: 15px;
+    }
+
+    .footer_inf>div {
+        text-align: center;
+    }
+
+}

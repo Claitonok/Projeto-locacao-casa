@@ -1,5 +1,24 @@
 "UTF-8";
 
+// Seleciona o elemento de input pelo ID
+const inputCPF = document.getElementById('cpfInput');
+
+	// Adiciona um ouvinte de evento 'input' que chama a função de formatação sempre que o usuário digita
+	inputCPF.addEventListener('input', function (e) {
+    	let valor = e.target.value;
+
+    	// Remove qualquer caractere que não seja dígito
+    	valor = valor.replace(/\D/g, "");
+
+    	// Aplica a máscara de CPF: XXX.XXX.XXX-XX
+    	valor = valor.replace(/(\d{3})(\d)/, "$1.$2");
+    	valor = valor.replace(/(\d{3})(\d)/, "$1.$2");
+   	 	valor = valor.replace(/(\d{3})(\d{1,2})$/, "$1-$2");
+
+    	// Atualiza o valor do input com a formatação
+    	e.target.value = valor;
+});
+
 function calcular() {
     const valorDiaria = Number(document.getElementById('valor').value);
     const inputResultado = document.getElementById('resultado');
