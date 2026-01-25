@@ -53,6 +53,9 @@
 			<div class="col-sm-10">
 				<input type="password" name="txtsenha" placeholder="Senha" class="form-control" value=""
 				onkeyup="checkPassword(this.value)" id="pswrd">
+				<br>
+				<input value="aceito" class="form-check-input" type="checkbox" id="gridCheck1">
+					<label class="form-check-label" for="gridCheck1">Termos e Politica </label>
 			</div>
 			
 			<!-- LOCAL ONDE E PRINTADO AS MENSAGENS DA VALIDACAO -->
@@ -71,15 +74,6 @@
 			<span>${responta_para_uses}</span>
 		</c:if> -->
 		
-		
-		<div class="row mb-3">
-			<div class="col-sm-10 offset-sm-2">
-				<div class="form-check">
-					<input value="aceito" class="form-check-input" type="checkbox" id="gridCheck1">
-					<label class="form-check-label" for="gridCheck1">Termos e Politica </label>
-				</div>
-			</div>
-		</div>
 		<div class="Sign-in">
 			<input type="hidden" name="acao" value="login"><br>
 			<button type="submit" name="autentica" class="btn btn-primary">Sign-in</button>
@@ -87,8 +81,13 @@
 	</form>
 	
 	<div id="link_cadastra">
-		<a href="http://localhost:8080/">cadastra-se</a>
+		<a
+			href="http://localhost:8080/Home_acomodacao/Home_acomo_Servlet?acao=cadastrarUser">Sign-up</a>
+		| <a
+			href="http://localhost:8080/Home_acomodacao/Home_acomo_Servlet?acao=AlterarSenhaUser">Change-Password</a>
 	</div>
+
+	<div id="vazio"></div>
 	
 	<script src="pastajs/script.js"></script>
 	<script src="pastajs/validationEmail.js"></script>

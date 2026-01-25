@@ -31,26 +31,34 @@
     <img height="100" width="100" src="https://images.icon-icons.com/5/PNG/256/home_243.png" alt="Casa">
   </div>
 
-  <form action="" method="post">
+  <form action="./conferirPagar.html" method="post" class="needs-validation" novalidate>
 
 
-    <label for="nome" class="col-sm-2 col-form-label">Nome</label>
+    <label for="validationCustom01" class="col-sm-2 col-form-label">Nome</label>
     <div class="col-auto">
-      <input type="text" id="nome" class="form-control">
+      <input type="text" id="validationCustom01" class="form-control" required>
+       <div class="invalid-feedback">
+        Campo nome obrigatorio.
+      </div>
     </div>
 
 
-    <label for="email" class="col-sm-2 col-form-label">Email</label>
+    <label for="validationCustom02" class="col-sm-2 col-form-label">Email</label>
     <div class="col-auto">
-      <input placeholder="exemplo@exemplo.com" type="email" id="email" class="form-control">
+      <input placeholder="exemplo@exemplo.com" type="email" id="validationCustom02" class="form-control" required>
+       <div class="invalid-feedback">
+        Campo email obrigatorio.
+      </div>
     </div>
 
 
 
-    <label for="inputPassword6" class="col-sm-2 col-form-label">Password</label>
-
+      <label for="validationCustom03" class="col-sm-2 col-form-label">Password</label>
     <div class="col-auto">
-      <input type="password" id="inputPassword6" class="form-control">
+      <input type="password" id="validationCustom03" class="form-control" required>
+      <div class="invalid-feedback">
+        Campo senha obrigatorio.
+      </div>
     </div>
 
     <div class="col-auto">
@@ -60,17 +68,23 @@
     </div>
 
 
-    <label for="telefone" class="col-sm-2 col-form-label">Telefone</label>
+    <label for="validationCustom04" class="col-sm-2 col-form-label">Telefone</label>
     <div class="col-auto">
-      <input placeholder="(DD)xxxxx-xxxx" type="tel" id="telefone" class="form-control">
+      <input placeholder="(DD)xxxxx-xxxx" type="tel" id="validationCustom04" class="form-control" required>
+     <div class="invalid-feedback">
+        Campo telefone obrigatorio.
+      </div>
     </div>
 
     <div class="Sign-in">
       <input type="hidden" name="acao" value="login"><br>
-      <button type="submit" name="autentica" class="btn btn-dark">Confirm identity</button>
+      <button type="submit" name="autentica" class="btn btn-dark">Confirmar identidade</button>
     </div>
 
   </form>
+
+  <script src="pastajs/formScript.js"></script>
+
 </body>
 
 </html>

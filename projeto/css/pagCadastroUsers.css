@@ -37,7 +37,7 @@ body {
 }
 
 /* formulario de login */
-form {
+.needs-validation {
     font-family: monospace;
     margin-top: 40px;
     width: 50%;
