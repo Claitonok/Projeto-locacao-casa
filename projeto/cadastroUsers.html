@@ -31,21 +31,21 @@
     <img height="100" width="100" src="https://images.icon-icons.com/5/PNG/256/home_243.png" alt="Casa">
   </div>
 
-  <form action="./conferirPagar.html" method="post" class="needs-validation" novalidate>
+  <form action="" method="post" class="needs-validation" novalidate>
 
 
-    <label for="validationCustom01" class="col-sm-2 col-form-label">Nome</label>
+    <label for="txtNome" class="col-sm-2 col-form-label">Nome</label>
     <div class="col-auto">
-      <input type="text" id="validationCustom01" class="form-control" required>
+      <input type="text" id="txtNome" class="form-control" required>
        <div class="invalid-feedback">
         Campo nome obrigatorio.
       </div>
     </div>
 
 
-    <label for="validationCustom02" class="col-sm-2 col-form-label">Email</label>
+    <label for="txtEmail" class="col-sm-2 col-form-label">Email</label>
     <div class="col-auto">
-      <input placeholder="exemplo@exemplo.com" type="email" id="validationCustom02" class="form-control" required>
+      <input placeholder="exemplo@exemplo.com" type="email" id="txtEmail" class="form-control" required>
        <div class="invalid-feedback">
         Campo email obrigatorio.
       </div>
@@ -53,9 +53,9 @@
 
 
 
-      <label for="validationCustom03" class="col-sm-2 col-form-label">Password</label>
+    <label for="txtPassword" class="col-sm-2 col-form-label">Password</label>
     <div class="col-auto">
-      <input type="password" id="validationCustom03" class="form-control" required>
+      <input type="password" id="txtPassword" class="form-control" required>
       <div class="invalid-feedback">
         Campo senha obrigatorio.
       </div>
@@ -68,9 +68,9 @@
     </div>
 
 
-    <label for="validationCustom04" class="col-sm-2 col-form-label">Telefone</label>
+    <label for="txtTelefone" class="col-sm-2 col-form-label">Telefone</label>
     <div class="col-auto">
-      <input placeholder="(DD)xxxxx-xxxx" type="tel" id="validationCustom04" class="form-control" required>
+      <input placeholder="(DD)xxxxx-xxxx" type="tel" id="txtTelefone" class="form-control" maxlength="15" required>
      <div class="invalid-feedback">
         Campo telefone obrigatorio.
       </div>
@@ -83,7 +83,8 @@
 
   </form>
 
-  <script src="pastajs/formScript.js"></script>
+<script type="text/javascript" src="pastajs/formScript.js"></script>
+<script type="text/javascript" src="pastajs/formataTelefone.js"></script>
 
 </body>
 
