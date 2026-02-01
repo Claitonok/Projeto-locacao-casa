@@ -7,7 +7,7 @@ var qrcode = new QRCode(document.getElementById("qrcode"), {
 
     function makeCode () {		
         var link = document.getElementById("link");	
-        var elStatus = document.getElementById("status");	
+        var elStatus = document.getElementById("invalid-feedback");	
         if (!link.value) {		
             elStatus.innerHTML = "Preencha o campo acima";		
             link.focus();		

@@ -19,41 +19,6 @@ body {
     background-color: var(--cor-fundo);
 }
 
-main {
-    display: flex;
-    flex-direction: column;
-    columns: 1;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    font-family: Arial, sans-serif;
-    margin-top: 30px;
-    background-color: var(--cor-link);
-    border: 5px solid #000000;
-    border-radius: 10px;
-    width: 400px;
-    height: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
-}
-main > div {
-    margin-bottom: 20px;
-    font-size: 15px;
-    font-weight: bold;
-}
-main form {
-    margin-bottom: 90px;
-}
-
-main form input[type="text"] {
-    width: 300px;
-    padding: 10px;
-    border: 5px solid #000000;
-    font-size: 18px;
-}
-
 /* DeskTop */
 @media screen and (min-width: 1025px) {
 
@@ -67,10 +32,54 @@ main form input[type="text"] {
         box-shadow: 05px 05px 05px 05px rgb(66, 74, 191);
     }
 
+    main {
+        display: flex;
+        flex-direction: column;
+        columns: 1;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        font-family: Arial, sans-serif;
+        margin-top: 30px;
+        background-color: var(--cor-link);
+        border: 5px solid #000000;
+        border-radius: 10px;
+        width: 400px;
+        height: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    }
+
+    main>div {
+        margin-bottom: 20px;
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    main form {
+        margin-bottom: 80px;
+    }
+
+    main form input[type="text"] {
+        width: 300px;
+        padding: 10px;
+        border: 5px solid #000000;
+        font-size: 18px;
+    }
+
+    main form label {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        margin-left: 40px;
+    }
+
     #qrcode {
         width: 140px;
         height: 140px;
-        margin-right: 140px;
+        margin-right: 150px;
         margin-top: -60px;
     }
 
@@ -90,11 +99,55 @@ main form input[type="text"] {
         box-shadow: 05px 05px 05px 05px rgb(66, 74, 191);
     }
 
+    main {
+        display: flex;
+        flex-direction: column;
+        columns: 1;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        font-family: Arial, sans-serif;
+        margin-top: 30px;
+        background-color: var(--cor-link);
+        border: 5px solid #000000;
+        border-radius: 10px;
+        width: 400px;
+        height: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    }
+
+    main>div {
+        margin-bottom: 20px;
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    main form {
+        margin-bottom: 10px;
+    }
+
+    main form input[type="text"] {
+        width: 300px;
+        padding: 10px;
+        border: 5px solid #000000;
+        font-size: 18px;
+    }
+
+    main form label {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        margin-left: 40px;
+    }
+
     #qrcode {
         width: 140px;
         height: 140px;
         margin-top: 10px;
-        margin-right: 140px;
+        margin-right: 150px;
     }
 
 
@@ -113,11 +166,55 @@ main form input[type="text"] {
         box-shadow: 05px 05px 05px 05px rgb(66, 74, 191);
     }
 
+    main {
+        display: flex;
+        flex-direction: column;
+        columns: 1;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        font-family: Arial, sans-serif;
+        margin-top: 30px;
+        background-color: var(--cor-link);
+        border: 5px solid #000000;
+        border-radius: 10px;
+        width: 400px;
+        height: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    }
+
+    main>div {
+        margin-bottom: 20px;
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    main form {
+        margin-bottom: 10px;
+    }
+
+    main form input[type="text"] {
+        width: 300px;
+        padding: 10px;
+        border: 5px solid #000000;
+        font-size: 18px;
+    }
+
+    main form label {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        margin-left: 40px;
+    }
+
     #qrcode {
         width: 140px;
         height: 140px;
         margin-top: 10px;
-        margin-right: 140px;
+        margin-right: 150px;
     }
 
 
