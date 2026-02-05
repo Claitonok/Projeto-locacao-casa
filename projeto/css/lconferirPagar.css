@@ -71,6 +71,13 @@ main section > div > form > div .col label{
     border-color: black;
 }
 
+#qrcode {
+    width: 140px;
+    height: 140px;
+    margin-top: 20px;
+    margin-left: 180px;
+}
+
 /* Infomações do Rodape */
 .footer_inf {
     display: flex;
