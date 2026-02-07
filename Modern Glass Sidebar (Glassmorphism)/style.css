@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 260px;
+  height: 100vh;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-right: 1px solid rgba(255,255,255,0.2);
+  color: #fff;
+  transition: width 0.3s ease;
+  position: relative;
+}
+
+.sidebar.collapsed {
+  width: 90px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.4rem;
+  margin-bottom: 40px;
+}
+
+.logo span {
+  transition: opacity 0.3s;
+}
+
+.sidebar.collapsed .logo span {
+  opacity: 0;
+}
+
+nav a {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px;
+  border-radius: 12px;
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 12px;
+  transition: background 0.3s;
+  cursor: pointer;
+}
+
+nav a:hover,
+nav a.active {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+nav span {
+  transition: opacity 0.3s;
+}
+
+.sidebar.collapsed nav span {
+  opacity: 0;
+}
+
+/* Toggle */
+.toggle {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 14px;
+  border: none;
+  background: rgba(255,255,255,0.2);
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.toggle:hover {
+  background: rgba(255,255,255,0.3);
+}

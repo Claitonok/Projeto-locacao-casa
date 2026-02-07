@@ -7,11 +7,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
     <link rel="ICON" type="ICON" sizes="16x16" href="https://images.icon-icons.com/5/PNG/256/home_243.png">
-    <link rel="stylesheet" href="./css/pagPagamentos.css">
+    <!-- <link rel="stylesheet" href="./css/pagPagamentos.css"> -->
+     <link rel="stylesheet" href="./CSSTest/paginaPagam.css">
     <title>Pagamentos ♾️ HOME_PAGE</title>
 </head>
 
 <script src="./pastajs/calcularJsDiaria.js" defer></script>
+<script src="./pastajs/validarCPF.js" defer></script>
+<script src="./pastajs/checkboxJs.js" defer></script>
+<script src="./pastajs/datasValidarJS.js" defer></script>
 
 <body>
 
@@ -93,7 +97,7 @@
 
                             <label for="valor">Valor Diária</label>
                             <div class="mb-3">
-                                <input type="number" id="valor" value="400" readonly>
+                                <input type="text" id="valor" value="400" readonly>
                             </div>
 
                             <label for="Data_Inicio">Data Inicio</label>
@@ -110,7 +114,6 @@
                             <div class="mb-3">
                                 <input type="number" name="total" id="resultado" readonly>
                             </div>
-                            <span class="btn btn-danger" id="formatacaoInput"></span>
                         </div>
                         </div>
 
@@ -130,7 +133,7 @@
 
                             <label for="">Numero do cartão</label>
                             <div class="mb-3">
-                                <input type="text" id="" placeholder="xxx xxx xxx xxx">
+                                <input type="text" id="nCart" maxlength="19" placeholder="xxxx xxxx xxxx xxxx (19 dígitos)" required="required">
                             </div>
 
                             <label for="">Data de validade</label>
@@ -150,8 +153,8 @@
                                     <path
                                         d="M14.52 2c1.029 0 2.015 .409 2.742 1.136l3.602 3.602a3.877 3.877 0 0 1 0 5.483l-2.643 2.643a3.88 3.88 0 0 1 -4.941 .452l-.105 -.078l-5.882 5.883a3 3 0 0 1 -1.68 .843l-.22 .027l-.221 .009h-1.172c-1.014 0 -1.867 -.759 -1.991 -1.823l-.009 -.177v-1.172c0 -.704 .248 -1.386 .73 -1.96l.149 -.161l.414 -.414a1 1 0 0 1 .707 -.293h1v-1a1 1 0 0 1 .883 -.993l.117 -.007h1v-1a1 1 0 0 1 .206 -.608l.087 -.1l1.468 -1.469l-.076 -.103a3.9 3.9 0 0 1 -.678 -1.963l-.007 -.236c0 -1.029 .409 -2.015 1.136 -2.742l2.643 -2.643a3.88 3.88 0 0 1 2.741 -1.136m.495 5h-.02a2 2 0 1 0 0 4h.02a2 2 0 1 0 0 -4" />
                                 </svg>
-                                <label for="">Pagar no pix</label>
-                                <input type="checkbox" value="aceito">
+                                <label for="checkbox">Pagar no pix</label>
+                                <input type="checkbox" id="checkbox" value="aceito">
                             </div>
                             <button type="submit" class="btn btn-success">Seguir</button>
                         </div>

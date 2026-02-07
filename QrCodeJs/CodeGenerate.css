@@ -1,0 +1,144 @@
+@charset "UTF-8";
+@import "tailwindcss";
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* VARIÁVEIS */
+:root {
+    --bg: var(--cor-fundo);
+    --card: #fffcfc;
+    --text: #000000;
+    --color-azul3: rgb(12, 24, 192);
+    --cor-fundo: hsla(223, 64%, 35%, 0.483);
+    --cor-hover: hsl(0, 0%, 100%);
+    --cor-link: hsl(0, 0%, 100%);
+}
+
+#cabecalho {
+    display: flex;
+    justify-content: space-evenly;
+    font-family: sans-serif;
+    padding: 15px;
+    background-color: var(--color-azul3);
+    color: var(--cor-link);
+    box-shadow: 05px 05px 05px 05px rgb(66, 74, 191);
+}
+
+body.dark {
+    --bg: #121212;
+    --text: #ffffffd7;
+    --card: #232b50;
+    background: var(--bg);
+    color: var(--text);
+}
+body{
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+/* MAIN */
+main {
+    padding: 60px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* FORM CARD */
+form {
+    max-width: 750px;
+    background: var(--card);
+    color: var(--text);
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.702);
+}
+
+/* INPUT */
+.form-control {
+    border-radius: 12px;
+    padding: 12px;
+}
+
+/* AÇÕES */
+.acoes-qrcode {
+    margin-top: 25px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* QR CODE CARD */
+#qrcode {
+    margin: 0 auto;
+    padding: 25px;
+    width: fit-content;
+    background: var(--card);
+    border-radius: 18px;
+    margin-top: 35px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.702);
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+/* QR visível */
+#qrcode.show {
+    animation: qrFade 0.6s ease forwards;
+}
+
+#qrcode img,
+#qrcode canvas {
+    max-width: 260px;
+}
+
+/* ANIMAÇÃO */
+@keyframes qrFade {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* PRINT */
+@media print {
+    header,
+    form,
+    .acoes-qrcode {
+        display: none !important;
+    }
+
+    body {
+        background: #fff;
+    }
+}
+/* =========================
+   RESPONSIVO
+========================= */
+@media screen and (max-width: 767px) {
+    main {
+        padding: 30px 10px;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    .acoes-qrcode {
+        gap: 8px;
+    }
+
+    #qrcode {
+        padding: 15px;
+    }
+    #qrcode img,
+    #qrcode canvas {
+        max-width: 200px;
+    }
+}
