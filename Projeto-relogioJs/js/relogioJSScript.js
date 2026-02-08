@@ -1,32 +1,31 @@
-const time = document.getElementById("time");
-const date = document.getElementById("date");
 const body = document.body;
 
-function updateClock() {
-  const now = new Date();
+function atualizarRelogio() {
+    const agora = new Date();
 
-  time.style.transform = "scale(1.05)";
-  time.style.opacity = "0.7";
+    const horas = agora.getHours(); // 0–23 (fica 18)
+    const minutos = agora.getMinutes();
+    const segundos = agora.getSeconds();
 
-  setTimeout(() => {
-    time.innerText = now.toLocaleTimeString("en-US", {
-      hour12: true
-    });
+    const ampm = horas >= 12 ? "PM" : "AM";
 
-    date.innerText = now.toLocaleDateString("pt-BR", {
+    const h = String(horas).padStart(2, "0");
+    const m = String(minutos).padStart(2, "0");
+    const s = String(segundos).padStart(2, "0");
+
+    date.innerText = agora.toLocaleDateString("pt-BR", {
       weekday: "long",
       day: "2-digit",
       month: "long",
       year: "numeric"
     });
 
-    time.style.transform = "scale(1)";
-    time.style.opacity = "1";
-  }, 100);
+    document.getElementById("time").textContent =
+        `${h}:${m}:${s} ${ampm}`;
 }
 
-setInterval(updateClock, 1000);
-updateClock();
+setInterval(atualizarRelogio, 1000);
+atualizarRelogio();
 
 
 
@@ -57,20 +56,3 @@ setInterval(autoTheme, 60000);
 setThemeByTime();
 setInterval(setThemeByTime, 60000);
 
-
-
-
-
-
-
-// const time = document.getElementById("time");
-
-// function updateClock() {
-//     const now = new Date();
-//     time.innerText = now.toLocaleTimeString("en-US", {
-//         hour12: true
-//     });
-// }
-
-// setInterval(updateClock, 1000);
-// updateClock();
