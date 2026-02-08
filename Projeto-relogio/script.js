@@ -10,7 +10,7 @@ function updateClock() {
   let period = "";
 
   if (!is24Hour) {
-    period = hours >= 12 ? "PM" : "AM";
+    period = hours >= 12 ? "PM" : "AM"; 
     hours = hours % 12 || 12;
   }
 
@@ -39,7 +39,8 @@ document.getElementById("toggleFormat").addEventListener("click", () => {
 
 document.getElementById("toggleTheme").addEventListener("click", () => {
   isDark = !isDark;
-  document.body.className = isDark ? "dark" : "light";
+  // document.body.className = isDark ? "dark" : "light";
+   document.body.className = isDark ? "light" : "dark";
   document.getElementById("toggleTheme").textContent =
     isDark ? "🌙 Dark" : "☀️ Light";
 });
