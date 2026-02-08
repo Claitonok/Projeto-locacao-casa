@@ -4,7 +4,7 @@ let isDark = true;
 function updateClock() {
   const now = new Date();
 
-  let hours = now.getHours();
+  let hours = now.getHours(); 
   let minutes = now.getMinutes();
   let seconds = now.getSeconds();
   let period = "";
@@ -39,10 +39,11 @@ document.getElementById("toggleFormat").addEventListener("click", () => {
 
 document.getElementById("toggleTheme").addEventListener("click", () => {
   isDark = !isDark;
-  // document.body.className = isDark ? "dark" : "light";
-   document.body.className = isDark ? "light" : "dark";
+  document.body.className = isDark ? "dark" : "light";
+  // document.body.className = isDark ? "light" : "dark";
   document.getElementById("toggleTheme").textContent =
-    isDark ? "🌙 Dark" : "☀️ Light";
+    isDark ? "☀️ Light" : "🌙 Dark";
+    // isDark ? "🌙 Dark" : "☀️ Light";
 });
 
 setInterval(updateClock, 1000);
