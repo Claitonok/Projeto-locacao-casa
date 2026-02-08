@@ -73,11 +73,11 @@
 
 
 		<label for="pswrd" class="col-sm-2 col-form-label">Password</label>
-		<div class="col-auto">
+		<div class="password-wrapper col-auto">
 			<input type="password" name="txtsenha" id="pswrd"
 				class="form-control" onkeyup="checkPassword(this.value)" required>
+				<i class="fa-solid fa-eye toggle-password" data-target="pswrd"></i>
 			<div class="invalid-feedback">Campo senha obrigatorio.</div>
-			<span class="BtnCadastro" id="toggleBtn"></span>
 		</div>
 
 		<!-- LOCAL ONDE E PRINTADO AS MENSAGENS DA VALIDACAO -->
@@ -113,6 +113,7 @@
 <script type="text/javascript" src="pastajs/formataTelefone.js"></script>
 <script type="text/javascript" src="pastajs/validaEmail.js"></script>
 <script type="text/javascript" src="pastajs/validetion.js"></script>
+<script type="text/javascript" src="pastajs/togglePassword.js"></script>
 
 </body>
 </html>

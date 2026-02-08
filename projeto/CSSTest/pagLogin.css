@@ -125,6 +125,29 @@ form label {
 	color: #0f0;
 }
 
+/* CONTAINER DO INPUT + ÍCONE */
+.password-wrapper {
+	position: relative;
+}
+
+/* ÍCONE OLHO */
+.toggle-password {
+	position: absolute;
+	right: 25px;
+	top: 37%;
+	transform: translateY(-50%);
+	cursor: pointer;
+	color: #ccc;
+	font-size: 1.1rem;
+	transition: color 0.3s ease;
+}
+
+.toggle-password:hover {
+	color: #6c63ff;
+}
+/* TERMINA AQUI ÍCONE OLHO */
+
+
 /* ===== BOTÃO LOGIN ===== */
 .Sign-in {
     margin-top: 25px;
