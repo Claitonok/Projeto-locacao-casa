@@ -57,13 +57,24 @@ document.addEventListener("keydown", (e) => {
 
         if (matrixAtiva) {
             iniciarMatrix();
-            canvas.style.display = "block";
-            document.getElementById("toggleMatrix").textContent = "[ M ] MATRIX OFF";
+            document.getElementById("toggleMatrix").textContent = "[ M ] MATRIX ON";
         } else {
             pararMatrix();
-            canvas.style.display = "none";
-            document.getElementById("toggleMatrix").textContent = "[ M ] MATRIX ON";
+            document.getElementById("toggleMatrix").textContent = "[ M ] MATRIX OFF";
         }
+    }
+});
+
+const toggleButton = document.getElementById("toggleMatrix");
+toggleButton.addEventListener("click", () => {
+    matrixAtiva = !matrixAtiva;
+    
+    if (matrixAtiva) {
+        iniciarMatrix();
+        toggleButton.textContent = "[ M ] MATRIX ON";
+    } else {
+        pararMatrix();
+        toggleButton.textContent = "[ M ] MATRIX OFF";
     }
 });
 
