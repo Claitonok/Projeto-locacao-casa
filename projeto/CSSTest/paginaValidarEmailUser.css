@@ -1,0 +1,164 @@
+@charset "UTF-8";
+
+/* RESET */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* FUNDO */
+body {
+	min-height: 100vh;
+	background: linear-gradient(135deg, #1e1e2f, #2c2c54);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: #fff;
+}
+
+/* LOGO */
+.logoCasa {
+	margin: 40px 0 20px;
+}
+
+.logoCasa img {
+	filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.6));
+}
+
+/* FORMULÁRIO */
+form {
+	background: rgba(255, 255, 255, 0.08);
+	backdrop-filter: blur(10px);
+	padding: 35px;
+	border-radius: 16px;
+	width: 100%;
+	max-width: 420px;
+	box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+/* LABELS */
+form label {
+	font-weight: 500;
+	color: #e0e0e0;
+	margin-bottom: 6px;
+}
+
+/* INPUTS */
+.form-control {
+	background: rgba(255, 255, 255, 0.15);
+	border: none;
+	border-radius: 10px;
+	padding: 12px 14px;
+	color: #fff;
+	transition: all 0.3s ease;
+}
+
+.form-control::placeholder {
+	color: #ccc;
+}
+
+.form-control:focus {
+	background: rgba(255, 255, 255, 0.25);
+	box-shadow: 0 0 0 2px #6c63ff;
+	color: #fff;
+}
+
+/* BOTÃO MOSTRAR SENHA (caso JS use) */
+.BtnEmail {
+	position: absolute;
+	right: 20px;
+	top: 50%;
+	transform: translateY(-50%);
+	cursor: pointer;
+}
+
+/* VALIDAÇÃO BOOTSTRAP */
+.invalid-feedback {
+	font-size: 0.85rem;
+}
+
+/* ÁREA DE VALIDAÇÃO DE SENHA */
+.validaEmail {
+	margin-top: 10px;
+	font-size: 0.85rem;
+}
+
+.validaEmail ul {
+	list-style: none;
+	padding-left: 0;
+}
+
+.validaEmail li {
+	color: #fff;
+	margin-bottom: 4px;
+}
+.validaEmail ul li::before {
+	content: '\f192';
+	font-family: fontAwesome;
+	width: 20px;
+	display: inline-flex;
+}
+.validaEmail ul li.valid::before {
+	content: '\f00c';
+	color: #0f0;
+}
+
+/* CONTAINER DO INPUT + ÍCONE */
+.password-wrapper {
+	position: relative;
+}
+
+/* ÍCONE OLHO */
+.toggle-password {
+	position: absolute;
+	right: 15px;
+	top: 50%;
+	transform: translateY(-50%);
+	cursor: pointer;
+	color: #ccc;
+	font-size: 1.1rem;
+	transition: color 0.3s ease;
+}
+
+.toggle-password:hover {
+	color: #6c63ff;
+}
+/* TERMINA AQUI ÍCONE OLHO */
+
+/* BOTÃO PRINCIPAL */
+.Sign-in {
+	margin-top: 25px;
+	text-align: center;
+}
+
+.Sign-in button {
+	width: 100%;
+	padding: 12px;
+	border-radius: 12px;
+	font-weight: 600;
+	letter-spacing: 0.5px;
+	background: linear-gradient(135deg, #6c63ff, #48c6ef);
+	border: none;
+	color: #fff;
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.Sign-in button:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 8px 20px rgba(108, 99, 255, 0.6);
+}
+
+/* TOASTS */
+.toast {
+	border-radius: 12px;
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* RESPONSIVO */
+@media (max-width: 480px) {
+	form {
+		padding: 25px;
+	}
+}
