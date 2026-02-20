@@ -15,15 +15,14 @@ cpfInput.addEventListener('input', function (e) {
     // Aplica a máscara de CPF: XXX.XXX.XXX-XX
     valor = valor.replace(/(\d{3})(\d)/, "$1.$2");
     valor = valor.replace(/(\d{3})(\d)/, "$1.$2");
-        valor = valor.replace(/(\d{3})(\d{1,2})$/, "$1-$2");
+    valor = valor.replace(/(\d{3})(\d{1,2})$/, "$1-$2");
 
     // Atualiza o valor do input com a formatação
     e.target.value = valor;
 });
 
-    cpfInput.addEventListener("input", () => {
 
-        cpfInput.addEventListener("input", () => {
+    cpfInput.addEventListener("input", () => {
         const cpf = cpfInput.value.replace(/\D/g, "");
 
         if (cpf.length === 11 && validarCPF(cpf)) {
@@ -32,7 +31,7 @@ cpfInput.addEventListener('input', function (e) {
             setInvalido(cpfInput, "CPF inválido");
         }
     });
-    });
+
 
 
 // Adiciona um ouvinte de evento 'input' que chama a função de formatação sempre que o usuário digita
