@@ -1,0 +1,205 @@
+@charset "UTF-8";
+@import "tailwindcss";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --cor-footer: black;
+    --color-azul3: rgb(12, 24, 192);
+    --cor-fundo: hsla(223, 64%, 35%, 0.483);
+    --cor-hover: hsl(0, 0%, 100%);
+    --cor-link: hsl(0, 0%, 100%);
+    --cor-form-input: hsl(43, 100%, 50%);
+    --cor-fundo-formulario: rgb(140, 140, 80);
+}
+
+/* HEADER */
+header {
+    width: 100%;
+    background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+    padding: 10px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* CONTAINER PRINCIPAL */
+#cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* LOGO */
+#cabecalho img {
+    border-radius: 10px;
+}
+
+/* TITULOS */
+#cabecalho h4 {
+    color: #fff;
+    font-weight: 500;
+}
+
+
+/* ===== RESET LEVE ===== */
+body {
+    background: linear-gradient(135deg, #f5f7fa, #e4ecf4);
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    color: #333;
+}
+
+/* ===== CONTAINER PRINCIPAL ===== */
+main {
+    padding: 40px 0;
+}
+
+.container {
+    max-width: 1200px;
+}
+
+/* ===== CARDS ===== */
+.col {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 25px 30px;
+    margin: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.col:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* ===== TÍTULOS ===== */
+.col span {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #0d6efd;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* ===== LISTA ===== */
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+/* ===== LABELS ===== */
+label {
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 5px;
+    margin-right: 100%;
+}
+
+/* ===== INPUTS ===== */
+.form-control {
+    border-radius: 10px;
+    border: 1px solid #ced4da;
+    background-color: #f8f9fa;
+    transition: all 0.2s ease;
+}
+
+.form-control:read-only {
+    background-color: #f1f3f5;
+    color: #495057;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #0d6efd;
+}
+
+/* ===== TOTAL DESTACADO ===== */
+#txtTotal {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #198754;
+    background-color: #e9f7ef;
+    border: 2px solid #198754;
+}
+
+/* ===== CANCELAMENTO ===== */
+#txtCancelamento {
+    background-color: #fff3cd;
+    border: 1px solid #ffc107;
+    font-weight: 600;
+}
+
+/* ===== PIX ===== */
+#txtAceito {
+    background-color: #e3fafc;
+    border: 2px dashed #0dcaf0;
+    font-weight: 600;
+}
+
+#QrCodeCliente {
+    font-size: 0.85rem;
+    background-color: #f8f9fa;
+}
+
+/* ===== QR CODE ===== */
+#qrcode {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+#qrcode img {
+    padding: 15px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== BOTÃO PAGAR ===== */
+#button {
+    margin: 30px auto 0;
+    width: 200px;
+    height: 50px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+#button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(25, 135, 84, 0.4);
+}
+
+/* ===== FOOTER ===== */
+footer {
+    margin-top: 50px;
+    padding: 20px;
+    background: #212529;
+    color: #adb5bd;
+    text-align: center;
+}
+
+footer b {
+    color: #ffffff;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+    }
+
+    .col {
+        margin: 10px 0;
+    }
+
+    #button {
+        width: 100%;
+    }
+}

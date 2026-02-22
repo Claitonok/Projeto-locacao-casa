@@ -1,0 +1,266 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="f"%>
+
+<%@ page import="model.ImagemhopDao"%>
+<%@ page import="model.Photos"%>
+<%@ page import="java.util.ArrayList"%>
+<%@ page import="java.util.List"%>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
+	crossorigin="anonymous">
+	
+<link rel="ICON" type="ICON" sizes="16x16"
+	href="https://images.icon-icons.com/5/PNG/256/home_243.png">
+<link rel="stylesheet" href="./CSSTest/pagPagamento.css">
+<title>Pagamentos ♾️ HOME_PAGE</title>
+</head>
+
+<script type="text/javascript" src="./scriptJs/calculaDiaria.js" defer="defer"></script>
+<script type="text/javascript" src="./scriptJs/validarCPF.js" defer="defer"></script>
+<script type="text/javascript" src="./scriptJs/checkboxJs.js" defer="defer"></script>
+<script type="text/javascript" src="./scriptJs/datasValidarJS.js" defer="defer"></script>
+
+<script type="text/javascript" src="./scriptJs/verificaMeusPagamento.js" defer="defer"></script>
+
+<body>
+
+	<header>
+		<div id="cabecalho">
+			<img width="50" height="50"
+				src="https://images.icon-icons.com/5/PNG/256/home_243.png"
+				alt="casa">
+			<h4>Hospedagem ♾️ Home ♾️ Page</h4>
+			<a
+				href="http://localhost:8080/Home_acomodacao/Home_acomo_Servlet?acao=home"><button
+					class="btn btn-dark">Sair</button></a>
+		</div>
+	</header>
+
+	<nav></nav>
+
+	<main>
+
+		<section>
+			<div class="conteiner">
+
+				<%
+				int id = Integer.valueOf(request.getParameter("id"));
+				ImagemhopDao imagemhopDao = new ImagemhopDao();
+				List<Photos> photos = imagemhopDao.mostrarPorId(id);
+
+				for (Photos photo : photos) {
+					//String caminhoPorId = "./ImgHospedagem/" + photo.getSource();
+				%>
+
+				<div class="conteiner-divisao1">
+					<h5>Informações da acomodação</h5>
+
+					<ul>
+						<li><svg xmlns="http://www.w3.org/2000/svg" width="24"
+								height="24" viewBox="0 0 24 24" fill="currentColor"
+								class="icon icon-tabler icons-tabler-filled icon-tabler-home">
+                                <path stroke="none" d="M0 0h24v24H0z"
+									fill="none" />
+                                <path
+									d="M12.707 2.293l9 9c.63 .63 .184 1.707 -.707 1.707h-1v6a3 3 0 0 1 -3 3h-1v-7a3 3 0 0 0 -2.824 -2.995l-.176 -.005h-2a3 3 0 0 0 -3 3v7h-1a3 3 0 0 1 -3 -3v-6h-1c-.89 0 -1.337 -1.077 -.707 -1.707l9 -9a1 1 0 0 1 1.414 0m.293 11.707a1 1 0 0 1 1 1v7h-4v-7a1 1 0 0 1 .883 -.993l.117 -.007z" />
+                            </svg><b><%=photo.getState()%></b></li>
+						<li><svg xmlns="http://www.w3.org/2000/svg" width="24"
+								height="24" viewBox="0 0 24 24" fill="currentColor"
+								class="icon icon-tabler icons-tabler-filled icon-tabler-home">
+                                <path stroke="none" d="M0 0h24v24H0z"
+									fill="none" />
+                                <path
+									d="M12.707 2.293l9 9c.63 .63 .184 1.707 -.707 1.707h-1v6a3 3 0 0 1 -3 3h-1v-7a3 3 0 0 0 -2.824 -2.995l-.176 -.005h-2a3 3 0 0 0 -3 3v7h-1a3 3 0 0 1 -3 -3v-6h-1c-.89 0 -1.337 -1.077 -.707 -1.707l9 -9a1 1 0 0 1 1.414 0m.293 11.707a1 1 0 0 1 1 1v7h-4v-7a1 1 0 0 1 .883 -.993l.117 -.007z" />
+                            </svg><b><%=photo.getCity()%></b></li>
+
+						<li><svg xmlns="http://www.w3.org/2000/svg" width="24"
+								height="24" viewBox="0 0 24 24" fill="none"
+								stroke="currentColor" stroke-width="2" stroke-linecap="round"
+								stroke-linejoin="round"
+								class="icon icon-tabler icons-tabler-outline icon-tabler-businessplan">
+                                <path stroke="none" d="M0 0h24v24H0z"
+									fill="none" />
+                                <path
+									d="M16 6m-5 0a5 3 0 1 0 10 0a5 3 0 1 0 -10 0" />
+                                <path
+									d="M11 6v4c0 1.657 2.239 3 5 3s5 -1.343 5 -3v-4" />
+                                <path
+									d="M11 10v4c0 1.657 2.239 3 5 3s5 -1.343 5 -3v-4" />
+                                <path
+									d="M11 14v4c0 1.657 2.239 3 5 3s5 -1.343 5 -3v-4" />
+                                <path
+									d="M7 9h-2.5a1.5 1.5 0 0 0 0 3h1a1.5 1.5 0 0 1 0 3h-2.5" />
+                                <path d="M5 15v1m0 -8v1" />
+                            </svg><b>Valor por diaria</b> <svg
+								xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+								viewBox="0 0 24 24" fill="none" stroke="currentColor"
+								stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+								class="icon icon-tabler icons-tabler-outline icon-tabler-currency-real">
+                                <path stroke="none" d="M0 0h24v24H0z"
+									fill="none" />
+                                <path
+									d="M21 6h-4a3 3 0 0 0 0 6h1a3 3 0 0 1 0 6h-4" />
+                                <path
+									d="M4 18v-12h3a3 3 0 1 1 0 6h-3c5.5 0 5 4 6 6" />
+                                <path d="M18 6v-2" />
+                                <path d="M17 20v-2" />
+                            </svg> <span id="valor"><b><%=photo.getPrice()%></b></span></li>
+						<li><svg xmlns="http://www.w3.org/2000/svg" width="24"
+								height="24" viewBox="0 0 24 24" fill="none"
+								stroke="currentColor" stroke-width="2" stroke-linecap="round"
+								stroke-linejoin="round"
+								class="icon icon-tabler icons-tabler-outline icon-tabler-home-star">
+                                <path stroke="none" d="M0 0h24v24H0z"
+									fill="none" />
+                                <path
+									d="M19.258 10.258l-7.258 -7.258l-9 9h2v7a2 2 0 0 0 2 2h4" />
+                                <path d="M9 21v-6a2 2 0 0 1 2 -2h1.5" />
+                                <path
+									d="M17.8 20.817l-2.172 1.138a.392 .392 0 0 1 -.568 -.41l.415 -2.411l-1.757 -1.707a.389 .389 0 0 1 .217 -.665l2.428 -.352l1.086 -2.193a.392 .392 0 0 1 .702 0l1.086 2.193l2.428 .352a.39 .39 0 0 1 .217 .665l-1.757 1.707l.414 2.41a.39 .39 0 0 1 -.567 .411l-2.172 -1.138z" />
+                            </svg><b>Classificação: </b><span>⭐ <b><%=photo.getRating()%></b></span></li>
+
+						<h5>
+							<b>Detalhes da reserva</b>
+						</h5>
+						<li><b>Check-in:</b><span><b> 14:00 - 22:00</b></span></li>
+						<li><b>Check-out:</b><span><b> 07:00 - 11:00</b></span></li>
+						<li><b>Cancelamento grátis até:</b><span><b> 48
+									horas antes do check-in</b></span></li>
+					</ul>
+				</div>
+
+				<!-- Aqui temos as informações da acomodação escolhida pelo usuario!! -->
+				<div class="conteiner-divisao2">
+
+					<form action="Home_acomo_Servlet" method="post" class="needs-validation" novalidate>
+
+						<div class="conteiner-calcular">
+							<h5>
+								<b>Calcular</b>
+							</h5>
+							<div class="grid-label">
+
+								<label for="Price">Valor Diária</label>
+								<div class="mb-3">
+									<input type="text" name="txtPrice" id="Price"
+										value="<%=photo.getPrice()%>" readonly>
+								</div>
+
+								<label for="DataInicio">Data Inicio</label>
+								<div class="mb-3">
+									<input type="date" name="txtDataInicio" id="DataInicio">
+								</div>
+
+								<label for="DataFinal">Data Final</label>
+								<div class="mb-3">
+									<input type="date" name="txtDataFinal" id="DataFinal">
+								</div>
+								<hr>
+								<label for="resultado">Total</label>
+								<div class="mb-3">
+									<input type="number" name="txtTotal" id="resultado" readonly required="required">
+								</div>
+								
+							</div>
+						</div>
+
+						<div class="conteiner-pagamento">
+							<h5>
+								<b>Pagamento</b>
+							</h5>
+							<div class="grid-label">
+
+								<label for="nome">Nome Completo</label>
+								<div class="mb-3">
+									<input type="text" name="txtnome" id="nome"
+										placeholder="Nome do cartão">
+								</div>
+
+								<label for="cpfInput">CPF</label>
+								<div class="mb-3">
+									<input type="text" name="txtcpf" id=cpfInput maxlength="14"
+										placeholder="000.000.000-00" required="required">
+										 <div class="invalid-feedback">
+        									Campo CPF obrigatorio.
+      									</div>
+								</div>
+
+								<label for="nCart">Numero do cartão</label>
+								<div class="mb-3">
+									<input type="text" name="txtnCart" id="nCart" maxlength="19"
+										placeholder="xxx xxx xxx xxx">
+								</div>
+
+								<label for="dataValid">Data de validade</label>
+								<div class="mb-3">
+									<input type="date" name="txtdataValid" id="dataValid">
+								</div>
+
+								<label for="cDSeguran">Codigo de Segurança</label>
+								<div class="mb-3">
+									<input type="text" name="txtcDSeguran" id="cDSeguran"
+										maxlength="3" placeholder="000">
+								</div>
+
+								<div class="mb-3">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+										viewBox="0 0 24 24" fill="currentColor"
+										class="icon icon-tabler icons-tabler-filled icon-tabler-key">
+                                    <path stroke="none"
+											d="M0 0h24v24H0z" fill="none" />
+                                    <path
+											d="M14.52 2c1.029 0 2.015 .409 2.742 1.136l3.602 3.602a3.877 3.877 0 0 1 0 5.483l-2.643 2.643a3.88 3.88 0 0 1 -4.941 .452l-.105 -.078l-5.882 5.883a3 3 0 0 1 -1.68 .843l-.22 .027l-.221 .009h-1.172c-1.014 0 -1.867 -.759 -1.991 -1.823l-.009 -.177v-1.172c0 -.704 .248 -1.386 .73 -1.96l.149 -.161l.414 -.414a1 1 0 0 1 .707 -.293h1v-1a1 1 0 0 1 .883 -.993l.117 -.007h1v-1a1 1 0 0 1 .206 -.608l.087 -.1l1.468 -1.469l-.076 -.103a3.9 3.9 0 0 1 -.678 -1.963l-.007 -.236c0 -1.029 .409 -2.015 1.136 -2.742l2.643 -2.643a3.88 3.88 0 0 1 2.741 -1.136m.495 5h-.02a2 2 0 1 0 0 4h.02a2 2 0 1 0 0 -4" />
+                                </svg>
+									<label for="checkbox">Pagar no pix</label> <input
+										type="checkbox" name="txtAceito" id="checkbox"
+										value="aceito">
+								</div>
+								<input type="hidden" name="txtCheck-in" value="14:00 - 22:00">
+								<input type="hidden" name="txtCheck-out" value="07:00 - 11:00">
+								<input type="hidden" name="txtCancelamento" value="48 - horas">
+								<input type="hidden" name="txtState"
+									value="<%=photo.getState()%>"> <input type="hidden"
+									name="txtCity" value="<%=photo.getCity()%>"> 
+									<input type="hidden" name="txtId" value="${resposta.id}">
+									<input type="hidden" name="txtEmail" value="${resposta.email}">
+									<input type="hidden" name="acao" value="conferirPagarPagamento">
+								<button type="submit" class="btn btn-success">Seguir</button>
+							</div>
+
+
+						</div>
+					</form>
+
+				</div>
+				<%
+				}
+				%>
+			</div>
+		</section>
+
+	</main>
+
+	<footer>
+		<div class="footer_inf">
+			<p>© 2025 Hospedagem ♾️ Home ♾️ Page, Inc. · Privacidade Termos
+				Informações da empresa</p>
+			<p>
+				<b>Português (BR) R$ BRL</b>
+			</p>
+		</div>
+	</footer>
+
+
+</body>
+
+</html>

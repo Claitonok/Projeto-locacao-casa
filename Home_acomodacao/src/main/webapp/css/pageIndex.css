@@ -1,0 +1,208 @@
+@charset "UTF-8";
+@import "tailwindcss";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --cor-footer: black;
+    --color-azul3: rgb(12, 24, 192);
+    --cor-fundo: hsla(223, 64%, 35%, 0.483);
+    --cor-hover: hsl(0, 0%, 100%);
+    --cor-link: hsl(0, 0%, 100%);
+}
+
+#cabecalho {
+    display: flex;
+    justify-content: space-evenly;
+    font-family: sans-serif;
+    padding: 15px;
+    background-color: var(--color-azul3);
+    color: var(--cor-link);
+    box-shadow: 05px 05px 05px 05px rgb(66, 74, 191);
+}
+/* Formatação do ícone do header */
+#cabecalho img {
+    width: 60px;
+    height: 60px;
+}
+
+#cabecalho > h4 {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Corpo do site */
+main {
+    margin-top: 10px;
+    background-color: var(--cor-fundo);
+    border-radius: 10px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    column-gap: -22px;
+    row-gap: 20px;
+    padding: 15px;
+}
+
+.grid-container > div {
+    text-align: center;
+}
+
+/* Formatação da imagem */
+.grid-container > div > a > img {
+    width: 200px;
+    height: 150px;
+    border-radius: 10px;
+}
+
+.grid-container > div > div {
+    margin-left: 30%;
+    text-decoration: none;
+    color: var(--cor-footer);
+}
+
+.valor{
+    display: grid;
+    grid-template-columns: auto;
+    text-align: center;
+    margin-left: 5px;
+    margin-top: 15px;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: var(--cor-footer);
+    background-color: var(--cor-hover);
+    border-radius: 15px;
+    width: 40%;
+    padding: 5px;
+}
+.valor > p {
+    font-weight: normal;
+    font-family: sans-serif;
+    margin-right: 12px;
+}
+
+/* Rodape footer */
+.conteiner_rodape {
+    display: flex;
+    justify-content: space-around;
+    background-color: silver;
+    color: var(--cor-footer);
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.conteiner_rodape > div {
+    text-align: center;
+}
+
+.conteiner_rodape > div > p > b {
+    font-family: sans-serif;
+}
+
+.conteiner_rodape > div > p > a {
+    text-decoration: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: var(--cor-footer);
+}
+
+/* Infomações do Rodape */
+.footer_inf {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 15px;
+}
+
+.footer_inf > div {
+    text-align: center;
+}
+
+
+/* DeskTop */
+@media screen and (min-width: 1025px){
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        column-gap: -22px;
+        row-gap: 20px;
+    }
+
+    /* Rodape footer */
+    .conteiner_rodape {
+        display: flex;
+        justify-content: space-around;
+        background-color: silver;
+        color: var(--cor-footer);
+        border-radius: 10px;
+        padding: 15px;
+    }
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 1024px){
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: -22px;
+        row-gap: 20px;
+    }
+
+    /* Rodape footer */
+    .conteiner_rodape {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background-color: silver;
+        color: var(--cor-footer);
+        border-radius: 10px;
+        padding: 15px;
+    }
+    
+    #cabecalho > h4 {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	}
+    
+}
+
+/* Mobile */
+@media screen and (max-width: 767px) {
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: -22px;
+        row-gap: 20px;
+    }
+
+    /* Rodape footer */
+    .conteiner_rodape {
+        display: grid;
+        grid-template-columns: 1fr;
+        background-color: silver;
+        color: var(--cor-footer);
+        border-radius: 10px;
+        padding: 15px;
+    }
+    
+    #cabecalho > h4 {
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	}
+
+    /* Infomações do Rodape */
+    .footer_inf {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 15px;
+    }
+
+}

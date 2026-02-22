@@ -1,0 +1,120 @@
+<!-- senha: Qwerty781245* -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
+	crossorigin="anonymous">
+	 
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+	integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+	crossorigin="anonymous" referrerpolicy="no-referrer" />
+	
+<link rel="ICON" type="ICON" sizes="16x16"
+	href="https://images.icon-icons.com/5/PNG/256/home_243.png">
+	
+<link rel="stylesheet" href="./CSSTest/stcadastroUsers.css">
+<!-- <link rel="stylesheet" href="./css/stcadastroUsers.css"> -->
+<title>cadastra-se</title>
+</head>
+<body>
+
+	<header>
+
+		<div id="cabecalho">
+			<img width="50" height="50"
+				src="https://images.icon-icons.com/5/PNG/256/home_243.png"
+				alt="casa">
+			<h4>Hospedagem ♾️ Home ♾️ Page</h4>
+
+			<a
+				href="http://localhost:8080/Home_acomodacao/Home_acomo_Servlet?acao=home">
+				<button class="btn btn-dark">Home</button>
+			</a>
+		</div>
+
+	</header>
+
+	<div class="logoCasa">
+		<img height="100" width="100"
+			src="https://images.icon-icons.com/5/PNG/256/home_243.png" alt="Casa">
+	</div>
+
+	<form action="Home_acomo_Servlet" method="post"
+		class="needs-validation" novalidate>
+
+
+		<label for="txtnome" class="col-sm-2 col-form-label">Nome</label>
+		<div class="col-auto">
+			<input type="text" name="txtnome" id="txtnome"
+				class="form-control" required>
+			<div class="invalid-feedback">Campo nome obrigatorio.</div>
+		</div>
+
+
+		<label for="txtemail" class="col-sm-2 col-form-label">Email</label>
+		<div class="col-auto">
+			<input placeholder="exemplo@exemplo.com" type="email"
+				id="txtemail" name="txtemail"
+				onkeyup="checkEmail(this.value)" class="form-control" required>
+			<div class="invalid-feedback">Campo email obrigatorio.</div>
+			<div class="validaCadastro">
+				<ul>
+					<li id="outputArea">Email invalido!</li>
+				</ul>
+			</div>
+		</div>
+
+
+
+		<label for="pswrd" class="col-sm-2 col-form-label">Password</label>
+		<div class="password-wrapper col-auto">
+			<input type="password" name="txtsenha" id="pswrd"
+				class="form-control" onkeyup="checkPassword(this.value)" required>
+			<i class="fa-solid fa-eye toggle-password" data-target="pswrd"></i>
+			<div class="invalid-feedback">Campo senha obrigatorio.</div>
+		</div>
+
+		<!-- LOCAL ONDE E PRINTADO AS MENSAGENS DA VALIDACAO -->
+		<div class="validaCadastro">
+			<ul>
+				<li id="lower">Pelo menos um caractere minusculo</li>
+				<li id="upper">Pelo menos um caractere maiuscula</li>
+				<li id="number">Pelo menos um numero</li>
+				<li id="special">Pelo menos um caractere especial</li>
+				<li id="length">Pelo menos 8 caracteres</li>
+			</ul>
+		</div>
+
+
+		<label for="txtTelefone" class="col-sm-2 col-form-label">Telefone</label>
+		<div class="col-auto">
+			<input type="tel" id="txtTelefone" name="txtTelefone"
+				placeholder="(DD)xxxxx-xxxx" class="form-control" oninput="mascaraTelefone(this)" maxlength="15" required>
+			<div class="invalid-feedback">Campo telefone obrigatorio.</div>
+		</div>
+
+		<div class="Sign-in">
+			<input type="hidden" name="acao" value=User_cadastro><br>
+			<button type="submit" name="autentica" class="btn btn-dark">Confirmar
+				identidade</button>
+		</div>
+
+	</form>
+
+	<div id="vazio"></div>
+
+	<script type="text/javascript" src="./scriptJs/validaEmail.js"></script>
+	<script type="text/javascript" src="./scriptJs/validetion.js"></script>
+	<script type="text/javascript" src="./scriptJs/formScript.js"></script>
+	<script type="text/javascript" src="./scriptJs/formataTelefone.js"></script>
+	<script type="text/javascript" src="./scriptJs/togglePassword.js"></script>
+
+</body>
+</html>

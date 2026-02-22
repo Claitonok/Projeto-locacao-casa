@@ -1,0 +1,190 @@
+@charset "UTF-8";
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	--cor-footer: black;
+	--color-azul3: #0455f8;
+	--cor-fundo: hsl(221, 100%, 41%);
+	--cor-hover: hsl(0, 0%, 100%);
+	--cor-link: hsl(0, 0%, 100%);
+}
+
+#cabecalho {
+    display: flex;
+    justify-content: space-around;
+    font-family: sans-serif;
+    padding: 15px;
+    background-color: var(--color-azul3);
+    color: var(--cor-link);
+    box-shadow: 05px 05px 05px 05px rgb(66, 74, 191);
+}
+
+
+body {
+	background-color: rgb(247, 167, 76);
+}
+
+
+/* logo da casa */
+.logoCasa {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 80px;
+}
+
+
+/* formulario de login */
+.needs-validation {
+	font-family: monospace;
+	margin-top: 40px;
+	width: 50%;
+	margin-left: 30%;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	border-radius: 10px;
+}
+
+label {
+	color: black;
+}
+
+/* Aqui temos a validação do email */
+.BtnCadastro {
+	position: absolute;
+	margin-top: -30px;
+	width: 34px;
+	height: 34px;
+	background: rgba(0, 0, 0, 0.05);
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	border-radius: 50%;
+}
+
+.BtnCadastro::before {
+	content: '\f06e';
+	font-family: fontAwesome;
+}
+
+.BtnCadastro.hide::before {
+	content: '\f070';
+	position: absolute;
+	font-family: fontAwesome;
+}
+
+.validarEmail {
+	padding: 10px;
+	width: 200px;
+	background: #fff;
+	border-radius: 8px;
+	margin-top: 30px;
+	background: #376488;
+	box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+}
+
+.validarEmail ul {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.validarEmail ul li {
+	position: relative;
+	list-style: none;
+	color: #fff;
+	font-size: 0.85em;
+	transition: 1.0s;
+}
+
+.validarEmail ul li.valid {
+	color: rgba(255, 255, 255, 0.5);
+}
+
+.validarEmail ul li::before {
+	content: '\f192';
+	font-family: fontAwesome;
+	width: 20px;
+	display: inline-flex;
+}
+
+.validarEmail ul li.valid::before {
+	content: '\f00c';
+	color: #0f0;
+}
+
+/* Aqui termina a validação do email */
+
+
+
+/* botao de logar */
+.Enviar-email button {
+	font-family: monospace;
+	margin-left: 30%;
+	box-shadow: 05px 05px 05px 05px rgb(16, 36, 150);
+
+}
+
+.Enviar-email button:hover {
+	background-color: silver;
+	color: black;
+}
+
+.toast {
+  	backdrop-filter: blur(10px);
+}
+
+/* DeskTop */
+@media screen and (min-width: 1025px) {
+	
+.needs-validation {
+	font-family: monospace;
+	margin-top: 50px;
+	width: 50%;
+	margin-left: 30%;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	border-radius: 10px;
+}
+
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 1024px){
+	
+.needs-validation {
+	font-family: monospace;
+	margin-top: 50px;
+	width: 50%;
+	margin-left: 30%;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	border-radius: 10px;
+}
+
+}
+
+/* Mobile */
+@media screen and (max-width: 767px){
+	
+.needs-validation {
+	font-family: monospace;
+	margin-top: 50px;
+	width: 50%;
+	margin-left: 30%;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	border-radius: 10px;
+}
+
+}
+

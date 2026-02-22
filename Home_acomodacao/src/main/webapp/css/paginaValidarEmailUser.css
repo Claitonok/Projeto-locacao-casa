@@ -1,0 +1,230 @@
+@charset "UTF-8";
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	--cor-footer: black;
+	--color-azul3: #0455f8;
+	--cor-fundo: hsl(221, 100%, 41%);
+	--cor-hover: hsl(0, 0%, 100%);
+	--cor-link: hsl(0, 0%, 100%);
+}
+
+body {
+	background-color: rgb(247, 167, 76);
+}
+
+
+/* logo da casa */
+.logoCasa {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* formulario de login */
+.needs-validation {
+	font-family: monospace;
+	margin-top: 0px;
+	width: 50%;
+	margin-left: 30%;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	border-radius: 10px;
+}
+
+/* formulario de login */
+form {
+	font-family: monospace;
+	margin-top: 50px;
+	width: 50%;
+	margin-left: 30%;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	border-radius: 10px;
+}
+
+label {
+	color: black;
+}
+
+/* Aqui temos a validação do password */
+
+ .BtnEmail{
+ 	position: absolute;
+	margin-top: -30px;
+	width: 34px;
+	height: 34px;
+	background: rgba(0,0,0,0.05);
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	border-radius: 50%;
+	
+}
+.BtnEmail::before {
+	content: '\f06e';
+	font-family: fontAwesome;
+}
+.BtnEmail.hide::before {
+	content: '\f070';
+	position: absolute;
+	font-family: fontAwesome;
+}
+
+.validaEmail {
+	padding: 10px;
+	width: 400px;
+	background: #fff;
+	border-radius: 8px;
+	margin-top: 30px;
+	background: #376488;
+	box-shadow: 0 15px 25px rgba(0,0,0,0.15);
+}
+.validaEmail ul {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+} 
+.validaEmail ul li {
+	position: relative;
+	list-style: none;
+	color: #fff;
+	font-size: 0.85em;
+	transition: 1.0s;
+}
+.validaEmail ul li.valid {
+	color: rgba(255,255,255,0.5);
+}
+.validaEmail ul li::before {
+	content: '\f192';
+	font-family: fontAwesome;
+	width: 20px;
+	display: inline-flex;
+}
+.validaEmail ul li.valid::before {
+	content: '\f00c';
+	color: #0f0;
+}
+
+/* Aqui termina a validação do password */
+
+
+
+/* botao de logar */
+.Sign-in button {
+	font-family: monospace;
+	margin-left: 30%;
+	box-shadow: 05px 05px 05px 05px rgb(16, 36, 150);
+
+}
+
+.Sign-in button:hover {
+	background-color: silver;
+	color: black;
+}
+
+
+/* link do botao usando id*/
+#link_cadastra {
+	font-family: monospace;
+	cursor: pointer;
+	margin-left: 45%;
+	margin-top: 25px;
+}
+
+#link_cadastra:hover {
+	color: black;
+}
+
+.checkbox {
+	margin-top: 15px;
+	margin-left: 40%;
+	margin-right: 40%;
+
+}
+#liveToast{
+	backdrop-filter: blur(10px);
+}
+
+.toast-erro {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #e74c3c;
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.4s ease;
+    z-index: 9999;
+}
+
+.toast-erro.mostrar {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+
+/* DeskTop */
+@media screen and (min-width: 1025px) {
+	form {
+		font-family: monospace;
+		margin-top: 50px;
+		width: 50%;
+		margin-left: 30%;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+		border-radius: 10px;
+	}
+	.BtnEmail {
+		left: 67%;
+	}
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+	form {
+		font-family: monospace;
+		margin-top: 50px;
+		width: 50%;
+		margin-left: 30%;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+		border-radius: 10px;
+	}
+	.BtnEmail {
+		left: 67%;
+	}
+}
+
+/* Mobile */
+@media screen and (max-width: 767px) {
+	form {
+		font-family: monospace;
+		margin-top: 50px;
+		width: 50%;
+		margin-left: 30%;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+		border-radius: 10px;
+	}
+	.BtnEmail {
+		left: 67%;
+	}
+}

@@ -1,0 +1,195 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="f"%>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
+	crossorigin="anonymous">
+<link rel="ICON" type="ICON" sizes="16x16"
+	href="https://images.icon-icons.com/5/PNG/256/home_243.png">
+<link rel="stylesheet" href="./CSSTest/areaUsuario.css">
+<title>Área do Usuário</title>
+</head>
+
+<body>
+
+	<header>
+		<div id="cabecalho">
+			<img width="50" height="50"
+				src="https://images.icon-icons.com/5/PNG/256/home_243.png"
+				alt="casa">
+			<h4>Hospedagem ♾️ Home ♾️ Page</h4>
+			<a
+				href="http://localhost:8080/Home_acomodacao/Home_acomo_Servlet?acao=home"><button
+					class="btn btn-light">Sair</button></a>
+		</div>
+	</header>
+
+	<nav>
+		<div id="menu">
+			<ul>
+				<li><a
+					href="http://localhost:8080/Home_acomodacao/Home_acomo_Servlet?acao=minhasReservas&id=${resposta.id}"><button
+							class="btn btn-dark">Minhas Reservas</button></a></li>
+				<li><a href="http://localhost:8080/Home_acomodacao/Home_acomo_Servlet?acao=meus_dados&id=${resposta.id}"><button class="btn btn-dark">Meus
+							Dados</button></a></li>
+				<li><a href="#"><button class="btn btn-dark">Configurações</button></a></li>
+				<li><a href="#"><button class="btn btn-dark">Ajuda</button></a></li>
+			</ul>
+			<img width="65" height="65"
+				src="https://images.icon-icons.com/5/PNG/256/home_243.png"
+				alt="casa">
+		</div>
+	</nav>
+
+	<main>
+		<section>
+
+			<div class="container text-center">
+				<h2>Bem-vindo à sua área de usuário!</h2>
+				<p>Aqui você pode gerenciar suas reservas e informações
+					pessoais.</p>
+				<f:if test="${not empty dadosReservas}">
+					<f:forEach var="reservasItem" items="${dadosReservas}">
+						<div class="row">
+							<div class="col">
+								<span>Dados da Acomodação</span> <br> <br>
+								<ul>
+									<input type="hidden" name="txtId" value="">
+									<input type="hidden" name="txtEmail" value="">
+
+									<label for="txtNum_pedido" class="col-sm-2 col-form-label">Numero
+										do Pedido</label>
+									<div class="row mb-3">
+										<div class="col-sm-10">
+											<input type="text" name="txtNum_pedido"
+												placeholder="Numero do Pedido" class="form-control"
+												value="${reservasItem.numero_pedido}" id="txtNum_pedido"
+												readonly>
+										</div>
+									</div>
+
+									<label for="txtState" class="col-sm-2 col-form-label">Estado</label>
+									<div class="row mb-3">
+										<div class="col-sm-10">
+											<input type="text" name="txtState" placeholder="Estado"
+												class="form-control" value="${reservasItem.state}"
+												id="txtState" readonly>
+										</div>
+									</div>
+
+									<label for="txtCity" class="col-sm-2 col-form-label">Cidade</label>
+									<div class="row mb-3">
+										<div class="col-sm-10">
+											<input type="text" name="txtCity" placeholder="Cidade"
+												class="form-control" value="${reservasItem.city}"
+												id="txtCity" readonly>
+										</div>
+									</div>
+
+									<label for="txtDataInicio" class="col-sm-2 col-form-label">Data
+										Inicio</label>
+									<div class="row mb-3">
+										<div class="col-sm-10">
+											<input type="date" name="txtDataInicio"
+												placeholder="Data Inicio" class="form-control"
+												value="${reservasItem.data_inicio}" id="txtDataInicio"
+												readonly>
+										</div>
+									</div>
+
+									<label for="txtDataFinal" class="col-sm-2 col-form-label">Data
+										Final</label>
+									<div class="row mb-3">
+										<div class="col-sm-10">
+											<input type="date" name="txtDataFinal"
+												placeholder="Data Final" class="form-control"
+												value="${reservasItem.data_final}" id="txtDataFinal"
+												readonly>
+										</div>
+									</div>
+
+									<label for="txtCheck-in" class="col-sm-2 col-form-label">Check-in</label>
+									<div class="row mb-3">
+										<div class="col-sm-10">
+											<input type="text" name="txtCheck-in" placeholder="Check-in"
+												class="form-control" value="14:00 - 22:00" id="txtCheck-in"
+												readonly>
+										</div>
+									</div>
+
+									<label for="txtCheck-out" class="col-sm-2 col-form-label">Check-out</label>
+									<div class="row mb-3">
+										<div class="col-sm-10">
+											<input type="text" name="txtCheck-out"
+												placeholder="Check-out" class="form-control"
+												value="07:00 - 11:00" id="txtCheck-out" readonly>
+										</div>
+									</div>
+
+									<label for="txtTotal" class="col-sm-2 col-form-label">Total</label>
+									<div class="row mb-3">
+										<div class="col-sm-10">
+											<input type="text" name="txtTotal" placeholder="Total"
+												class="form-control" value="${reservasItem.total_pedido}"
+												id="txtTotal" readonly>
+										</div>
+									</div>
+
+									<label for="txtCancelamento" class="col-sm-2 col-form-label">Cancelamento</label>
+									<div class="row mb-3">
+										<div class="col-sm-10">
+											<input type="text" name="txtCancelamento"
+												placeholder="Cancelamento" class="form-control"
+												value="48 - horas" id="txtCancelamento" readonly>
+										</div>
+									</div>
+
+
+								</ul>
+							</div>
+						</div>
+					</f:forEach>
+							<a
+								href="http://localhost:8080/Home_acomodacao/Home_acomo_Servlet?acao=cancelar&id=${resposta.id}">
+								<button id="button" class="btn btn-danger">Cancelar Reserva</button>
+							</a>
+							<div class="acoes-reserva">
+                        <button class="btn btn-secondary" onclick="window.print()">
+                            🖨️ Imprimir Reserva
+                        </button>
+                        <button class="btn btn-success" onclick="window.print()">
+                            📄 Exportar PDF
+                        </button>
+                    </div>
+				</f:if>
+
+				<f:if test="${empty dadosReservas}">
+					<div id="mensagem_vazia">
+						<ul>
+							<li>Nenhuma reserva encontrada.</li>
+						</ul>
+					</div>
+				</f:if>
+
+			</div>
+		</section>
+	</main>
+
+	<footer>
+		<div class="footer_inf">
+			<p>&copy; 2026 Hospedagem Home Page. Todos os direitos
+				reservados.</p>
+		</div>
+	</footer>
+
+</body>
+
+</html>
